@@ -14,7 +14,7 @@ if __name__ == '__main__':
     parser.add_argument('--batch-size', type=int, default=1, help='batch size')
     parser.add_argument('--im-size', type=int, help='image size')
     parser.add_argument('--n-sample', type=int, default=1000, help='number of samples')
-    parser.add_argument('--gpu', type=int, default=0, help='gpu device')
+    parser.add_argument('--gpu', type=str, default='0', help='gpu device')
     parser.add_argument('--n-epoch', type=int, default=10, help='number of epochs')
     parser.add_argument('--verbose', type=lambda x: x.lower() in ("yes", 'true', 't', '1'), default=True,
                         help='verbose information')
@@ -23,7 +23,8 @@ if __name__ == '__main__':
     print('===================== benchmark for %s =====================' % args.network)
     print('n_sample=%d, batch_size=%d, n_epoch=%d' %  (args.n_sample, args.batch_size, args.n_epoch))
 
-    ctx = mx.gpu(args.gpu)
+    ctx = [mx.gpu(int(i)) for i in args.gpu.split(',')]
+    #  ctx = mx.gpu(args.gpu)
     im_size = 224
     if args.im_size is not None:
         im_size = args.im_size

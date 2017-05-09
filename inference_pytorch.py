@@ -12,11 +12,13 @@ if __name__ == '__main__':
     parser.add_argument('--batch-size', type=int, default=1, help='batch size')
     parser.add_argument('--im-size', type=int, help='image size')
     parser.add_argument('--n-sample', type=int, default=1000, help='number of samples')
-    parser.add_argument('--gpu', type=int, default=0, help='gpu device')
+    parser.add_argument('--gpu', type=str, default='0', help='gpu device')
     parser.add_argument('--n-epoch', type=int, default=10, help='number of epochs')
     parser.add_argument('--verbose', type=lambda x: x.lower() in ("yes", 'true', 't', '1'), default=True,
                         help='verbose information')
     args = parser.parse_args()
+
+    gpus = [int(i) for i in args.gpu.split(',')]
 
     print('===================== benchmark for %s =====================' % args.network)
     print('n_sample=%d, batch size=%d, num epoch=%d' %  (args.n_sample, args.batch_size, args.n_epoch))
@@ -41,7 +43,10 @@ if __name__ == '__main__':
     else:
         print('Initialize randomly')
 
-    net.cuda(device_id=args.gpu)
+    if len(gpus) == 1:
+        net.cuda(device_id=gpus[0])
+    else:
+        net = torch.nn.DataParallel(net, device_ids=gpus).cuda(device_id=gpus[0])
     net.eval()
     t2 = time.time()
     print('Finish loading model in %.4fs' % (t2-t1))
@@ -62,8 +67,8 @@ if __name__ == '__main__':
         t1 = time.time()
 
         for batch_id, (batch_input, batch_target) in enumerate(data_loader):
-            batch_input_var = torch.autograd.Variable(batch_input, volatile=True).cuda(device_id=args.gpu)
-            output =  net(batch_input_var)
+            batch_input_var = torch.autograd.Variable(batch_input, volatile=True).cuda(device_id=gpus[0])
+            output = net(batch_input_var)
 
         t2 = time.time()
         t_list.append(t2-t1)
