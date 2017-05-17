@@ -55,9 +55,13 @@ if __name__ == '__main__':
         plt.title('%s benchmark' % target)
         plt.ylabel('speed(images/s)')
         plt.xlabel('batch size')
+        xticks = []
         for dllib in results:
-            plt.plot(results[dllib]['batch_size'], results[dllib][target], label=dllib)
+            plt.plot(results[dllib]['batch_size'], results[dllib][target], label=dllib, marker='x')
+            if len(results[dllib]['batch_size']) > len(xticks):
+                xticks = results[dllib]['batch_size']
         plt.legend(loc=2)
+        plt.xticks(xticks)
         res_path = os.path.join(args.res_dir, '%s_%s.png' % (args.network, target.replace(' ', '_')))
         print('Save %s benchmark results to: %s' % (target, res_path))
         plt.savefig(res_path)
