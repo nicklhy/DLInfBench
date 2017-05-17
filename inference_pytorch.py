@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     gpus = [int(i) for i in args.gpu.split(',')]
 
-    print('===================== benchmark for %s =====================' % args.network)
+    print('===================== benchmark for %s %s =====================' % (DLLIB, args.network))
     print('n_sample=%d, batch size=%d, num epoch=%d' %  (args.n_sample, args.batch_size, args.n_epoch))
 
     im_size = 224

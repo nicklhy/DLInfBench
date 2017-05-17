@@ -22,7 +22,7 @@ if __name__ == '__main__':
                         help='verbose information')
     args = parser.parse_args()
 
-    print('===================== benchmark for %s =====================' % args.network)
+    print('===================== benchmark for %s %s =====================' % (DLLIB, args.network))
     print('n_sample=%d, batch_size=%d, n_epoch=%d' %  (args.n_sample, args.batch_size, args.n_epoch))
 
     ctx = [mx.gpu(int(i)) for i in args.gpu.split(',')]
