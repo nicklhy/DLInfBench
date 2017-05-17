@@ -53,7 +53,7 @@ if __name__ == '__main__':
         plt.clf()
         plt.figure(figsize=(12, 8))
         plt.title('%s benchmark' % target)
-        plt.ylabel('speed')
+        plt.ylabel('speed(images/s)')
         plt.xlabel('batch size')
         for dllib in results:
             plt.plot(results[dllib]['batch_size'], results[dllib][target], label=dllib)
