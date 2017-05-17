@@ -1,4 +1,5 @@
 *.pyc
 *.params
 *.caffemodel
-
+*.pb
+cache/*

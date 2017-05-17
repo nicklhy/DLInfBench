@@ -6,6 +6,8 @@ import numpy as np
 import argparse
 import time
 
+DLLIB = 'mxnet'
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='test CNN inference speed')
     parser.add_argument('--network', type=str, default='resnet50',
@@ -96,3 +98,15 @@ if __name__ == '__main__':
     print('Finish %d images for %d times in %.4fs, speed = %.4f image/s (%.4f ms/image)' % (args.n_sample, args.n_epoch, t_end-t_start, args.n_sample/t_avg, t_avg*1000.0/args.n_sample))
 
     print('===================== benchmark finished =====================')
+
+    from utils import get_gpu_memory
+    gpu_mem = get_gpu_memory()
+
+    #  save results
+    res_dir = 'cache/results'
+    if not os.path.exists(res_dir):
+        os.makedirs(res_dir)
+
+    res_file_path = os.path.join(res_dir, '%s_%s_%d.txt' % (DLLIB, args.network, args.batch_size))
+    with open(res_file_path, 'w') as fd:
+        fd.write('%s %s %d %f %d' % (DLLIB, args.network, args.batch_size, args.n_sample/t_avg, gpu_mem))

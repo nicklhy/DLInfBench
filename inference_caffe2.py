@@ -10,6 +10,55 @@ import numpy as np
 import argparse
 import time
 
+DLLIB = 'caffe2'
+
+def create_alexnet(model,
+                   data,
+                   num_labels=1000,
+                   label=None,
+                   no_loss=False):
+    model.Conv(data, 'conv1', 3, 96, weight_init=("MSRAFill", {}), kernel=11, stride=4)
+    model.Relu('conv1', 'conv1')
+    model.LRN('conv1', 'norm1', size=5, alpha=0.0001, beta=0.75)
+    model.MaxPool('norm1', 'pool1', kernel=3, stride=2)
+
+    model.Conv('pool1', 'conv2', 96, 256, weight_init=("MSRAFill", {}), kernel=5, group=2, pad=2)
+    model.Relu('conv2', 'conv2')
+    model.LRN('conv2', 'norm2', size=5, alpha=0.0001, beta=0.75)
+    model.MaxPool('norm2', 'pool2', kernel=3, stride=2)
+
+    model.Conv('pool2', 'conv3', 256, 384, weight_init=("MSRAFill", {}), kernel=3, pad=1)
+    model.Relu('conv3', 'conv3')
+
+    model.Conv('conv3', 'conv4', 384, 384, weight_init=("MSRAFill", {}), kernel=3, pad=1, group=2)
+    model.Relu('conv4', 'conv4')
+
+    model.Conv('conv4', 'conv5', 384, 256, weight_init=("MSRAFill", {}), kernel=3, pad=1, group=2)
+    model.Relu('conv5', 'conv5')
+    model.MaxPool('conv5', 'pool5', kernel=3, stride=2)
+
+    #  shape of pool5 is (batch_size, 256, 6, 6)
+    model.FC('pool5', 'fc6', 256*6*6, 4096)
+    model.Relu('fc6', 'fc6')
+    model.Dropout('fc6', 'fc6', dropout_ratio=0.5)
+
+    model.FC('fc6', 'fc7', 4096, 4096)
+    model.Relu('fc7', 'fc7')
+    model.Dropout('fc7', 'fc7', dropout_ratio=0.5)
+
+    last_out = model.FC('fc7', 'fc8', 4096, num_labels)
+
+    if no_loss:
+        return last_out
+
+    # If we create model for training, use softmax-with-loss
+    if (label is not None):
+        (softmax, loss) = model.SoftmaxWithLoss([last_out, label], ["softmax", "loss"])
+        return (softmax, loss)
+    else:
+        # For inference, we just return softmax
+        return model.Softmax(last_out, "softmax")
+
 def create_resnet(
     model,
     data,
@@ -120,35 +169,64 @@ if __name__ == '__main__':
     device_opts.device_type = caffe2_pb2.CUDA
     device_opts.cuda_gpu_id = args.gpu
 
-    if args.network == 'alexnet':
-        net_path = os.path.join(ROOT_DIR, 'models', 'caffe', args.network+'.prototxt')
+    if args.network.lower().startswith('vgg'):
+        net_path = os.path.join(ROOT_DIR, 'models', 'caffe', args.network+'_pred_net.pb')
         if not os.path.exists(net_path):
             print('%s doesn\'t exists!' % args.network)
             sys.exit(1)
+
+        if args.params is None:
+            print('Currently, we do not support building %s with random values, you have to choose a pre-trained weights file.' % args.network)
+            sys.exit(1)
+        elif not os.path.exists(args.params):
+            print('%s does not exists!' % args.params)
+            sys.exit(1)
+
+        init_def = caffe2_pb2.NetDef()
+        with open(args.params, 'r') as f:
+            init_def.ParseFromString(f.read())
+            init_def.device_option.CopyFrom(device_opts)
+            workspace.RunNetOnce(init_def)
 
         net_def = caffe2_pb2.NetDef()
         with open(net_path, 'r') as f:
             net_def.ParseFromString(f.read())
             net_def.device_option.CopyFrom(device_opts)
+            for op in net_def.op:
+                op.engine = 'CUDNN'
             workspace.CreateNet(net_def)
-
-    elif args.network.startswith('resnet'):
-        num_layers = int(args.network[6:])
-        model = CNNModelHelper(
-            order='NCHW',
-            name=args.network,
-            use_cudnn=True,
-            cudnn_exhaustive_search=True
-        )
-        softmax = create_resnet(model, 'data', num_layers=num_layers, num_input_channels=3, num_labels=1000, label=None, no_bias=True, no_loss=True)
+    elif args.network.startswith('resnet') or args.network == 'alexnet':
+        if args.network.startswith('resnet'):
+            model = CNNModelHelper(
+                order='NCHW',
+                name=args.network,
+                use_cudnn=True,
+                cudnn_exhaustive_search=True
+            )
+            num_layers = int(args.network[6:])
+            softmax = create_resnet(model, 'data', num_layers=num_layers, num_input_channels=3, num_labels=1000, label=None, no_bias=True, no_loss=True)
+        elif args.network == 'alexnet':
+            model = CNNModelHelper(
+                order='NCHW',
+                name=args.network,
+                #  use_cudnn=True,
+                #  cudnn_exhaustive_search=True
+                use_cudnn=False
+            )
+            print('WARNING: This alexnet implementation can not use CUDNN for some LRN layer related reason. If you can solve this problem, a PR is welcomed.')
+            softmax = create_alexnet(model, 'data', num_labels=1000, label=None, no_loss=True)
+        else:
+            raise NotImplementedError
         net_def = model.net.Proto()
         net_def.device_option.CopyFrom(device_opts)
         model.param_init_net.RunAllOnGPU(gpu_id=args.gpu, use_cudnn=True)
 
-    workspace.CreateBlob('data')
-    #  workspace.CreateBlob('label')
-    workspace.RunNetOnce(model.param_init_net)
-    workspace.CreateNet(net_def)
+        workspace.CreateBlob('data')
+        #  workspace.CreateBlob('label')
+        workspace.RunNetOnce(model.param_init_net)
+        workspace.CreateNet(net_def)
+    else:
+        raise NotImplementedError('%s is not supported yet' % args.network)
 
     t2 = time.time()
     print('Finish loading model in %.4fs' % (t2-t1))
@@ -192,3 +270,15 @@ if __name__ == '__main__':
     print('Finish %d images for %d times in %.4fs, speed = %.4f image/s (%.4f ms/image)' % (args.n_sample, args.n_epoch, t_end-t_start, args.n_sample/t_avg, t_avg*1000.0/args.n_sample))
 
     print('===================== benchmark finished =====================')
+
+    from utils import get_gpu_memory
+    gpu_mem = get_gpu_memory()
+
+    #  save results
+    res_dir = 'cache/results'
+    if not os.path.exists(res_dir):
+        os.makedirs(res_dir)
+
+    res_file_path = os.path.join(res_dir, '%s_%s_%d.txt' % (DLLIB, args.network, args.batch_size))
+    with open(res_file_path, 'w') as fd:
+        fd.write('%s %s %d %f %d' % (DLLIB, args.network, args.batch_size, args.n_sample/t_avg, gpu_mem))
