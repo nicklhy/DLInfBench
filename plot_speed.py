@@ -1,4 +1,5 @@
 import os
+import sys
 import glob
 import matplotlib
 matplotlib.use('Agg')
@@ -14,6 +15,9 @@ if __name__ == '__main__':
 
     results = {}
     file_list = glob.glob('%s/*_%s_*.txt' % (args.res_dir, args.network))
+    if len(file_list) == 0:
+        print('No results for %s' % args.network)
+        sys.exit(1)
     for fpath in file_list:
         fname = os.path.split(fpath)[-1]
         dllib, network, batch_size = os.path.splitext(fname)[0].split('_')
@@ -52,7 +56,7 @@ if __name__ == '__main__':
     for target in ['Speed', 'GPU Memory']:
         plt.clf()
         plt.figure(figsize=(12, 8))
-        plt.title('%s Benchmark' % target)
+        plt.title('%s %s Benchmark' % (args.network.capitalize(), target))
         if target == 'Speed':
             plt.ylabel('Speed(images/s)')
         elif target == 'GPU Memory':

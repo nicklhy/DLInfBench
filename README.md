@@ -24,12 +24,13 @@ I may add benchmark code for more networks (i.e. inception-bn, inception-v3) and
 ### Results
 
 #### Titan X (Pascal)
-GPU: Titan X (Pascal)
-CPU: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
-OS: Ubuntu 16.04 LTS
-Nvidia Driver: 375.26
-CUDA: 8.0.61
-CUDNN: 5.1.5
+
+* GPU: Titan X (Pascal)
+* CPU: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
+* OS: Ubuntu 16.04 LTS
+* Nvidia Driver: 375.26
+* CUDA: 8.0.61
+* CUDNN: 5.1.5
 
 **AlexNet**
 
