@@ -3,3 +3,4 @@
 *.caffemodel
 *.pb
 cache/*
+__pycache__/*
