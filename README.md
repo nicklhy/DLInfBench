@@ -11,8 +11,8 @@ I may add benchmark code for more networks (i.e. inception-bn, inception-v3) and
 1. Install Caffe, Caffe2, PyTorch and MXNet in your machine and make sure you can import them in python. Turn on CUDNN support if possible. If you only want to test a part of them, please modify "DLLIB_LIST" in `run.sh`.
 2. Modify the "GPU" variable in `run.sh` to the gpu device you want to use. (In order to get accurate results, please select a GPU without any other process running on it.)
 3. Start benchmark experiments by executing `sh run.sh`.
-4. The results will be saved to `cache/results/${DLLIB}_${NETWORK}_${BATCH_SIZE}.txt`. Each column in this file represents deep learning framework, network, batch size, speed(images/s), gpu memory(MB) respectively.
-5. Visualize the results by executing `python plot_speed.py --network ${NETWORK}`. This script will read all the available benchmark results saved in `cache/results` and generate two plots. `${NETWORK}_speed.png` demonstrates the network's inference speed of different batch size in different frameworks. `${NETWORK}_gpu_memory.png` demonstrates the network's gpu memory cost of different batch size in different frameworks.
+4. The results of network's inference speed and gpu memory cost will be saved to `cache/results/${DLLIB}_${NETWORK}_${BATCH_SIZE}.txt`. Columns in these files represent "framework name", "network", "batch size", "speed(images/s)", "gpu memory(MB)" respectively.
+5. We also plot the benchmark results in pictures as it could make them more straightforward. `cache/results/${NETWORK}_speed.png` demonstrates the network's inference speed of different batch size in different frameworks. `cache/results/${NETWORK}_gpu_memory.png` demonstrates the network's gpu memory cost of different batch size in different frameworks.
 
 ### Known Issues
 1. There is a problem when I try to run alexnet with CUDNN in caffe2(check the code [here](https://github.com/nicklhy/DLInfBench/blob/master/inference_caffe2.py#L214)). Thus, CUDNN is turned off temporally in caffe2's alexnet benchmarks. If you know how to fix this bug, a PR is welcomed.
@@ -23,12 +23,20 @@ I may add benchmark code for more networks (i.e. inception-bn, inception-v3) and
 The benchmark results that I tested on a Titan X (Pascal) GPU are saved in `results/titan_x_pascal`. The pictures below may give you a more straightforward demonstration.
 
 **AlexNet**
+![Speed Benchmark](results/titan_x_pascal/alexnet_speed.png)
+![GPU Memory Benchmark](results/titan_x_pascal/alexnet_gpu_memory.png)
 
 **ResNet50**
+![Speed Benchmark](results/titan_x_pascal/resnet50_speed.png)
+![GPU Memory Benchmark](results/titan_x_pascal/resnet50_gpu_memory.png)
 
 **ResNet101**
+![Speed Benchmark](results/titan_x_pascal/resnet101_speed.png)
+![GPU Memory Benchmark](results/titan_x_pascal/resnet101_gpu_memory.png)
 
 **ResNet152**
+![Speed Benchmark](results/titan_x_pascal/resnet152_speed.png)
+![GPU Memory Benchmark](results/titan_x_pascal/resnet152_gpu_memory.png)
 
 ### License
 This project is licensed under an [Apache-2.0](LICENSE) license.
