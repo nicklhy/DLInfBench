@@ -8,7 +8,7 @@ Currently, we support four deep learning frameworks: [Caffe](https://github.com/
 I may add benchmark code for more networks (i.e. inception-bn, inception-v3) and deep learning frameworks (i.e. Tensorflow) in the future but no specific plans have been made yet. Thus, anyone is welcomed to submit PRs.
 
 ### Usage
-1. Install Caffe, Caffe2, PyTorch and MXNet in your machine and make sure you can import them in python. If you only want to test a part of them, please modify "DLLIB_LIST" in `run.sh`.
+1. Install Caffe, Caffe2, PyTorch and MXNet in your machine and make sure you can import them in python. Turn on CUDNN support if possible. If you only want to test a part of them, please modify "DLLIB_LIST" in `run.sh`.
 2. Modify the "GPU" variable in `run.sh` to the gpu device you want to use. (In order to get accurate results, please select a GPU without any other process running on it.)
 3. Start benchmark experiments by executing `sh run.sh`.
 4. The results will be saved to `cache/results/${DLLIB}_${NETWORK}_${BATCH_SIZE}.txt`. Each column in this file represents deep learning framework, network, batch size, speed(images/s), gpu memory(MB) respectively.
