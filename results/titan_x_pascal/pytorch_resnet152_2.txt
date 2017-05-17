@@ -1,0 +1,1 @@
+pytorch resnet152 2 71.820984 771

@@ -14,29 +14,48 @@ I may add benchmark code for more networks (i.e. inception-bn, inception-v3) and
 4. The results of network's inference speed and gpu memory cost will be saved to `cache/results/${DLLIB}_${NETWORK}_${BATCH_SIZE}.txt`. Columns in these files represent "framework name", "network", "batch size", "speed(images/s)", "gpu memory(MB)" respectively.
 5. We also plot the benchmark results in pictures as it could make them more straightforward. `cache/results/${NETWORK}_speed.png` demonstrates the network's inference speed of different batch size in different frameworks. `cache/results/${NETWORK}_gpu_memory.png` demonstrates the network's gpu memory cost of different batch size in different frameworks.
 
+----------
+
 ### Known Issues
 1. There is a problem when I try to run alexnet with CUDNN in caffe2(check the code [here](https://github.com/nicklhy/DLInfBench/blob/master/inference_caffe2.py#L214)). Thus, CUDNN is turned off temporally in caffe2's alexnet benchmarks. If you know how to fix this bug, a PR is welcomed.
+
+----------
 
 ### Results
 
 #### Titan X (Pascal)
-The benchmark results that I tested on a Titan X (Pascal) GPU are saved in `results/titan_x_pascal`. The pictures below may give you a more straightforward demonstration.
+GPU: Titan X (Pascal)
+CPU: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
+OS: Ubuntu 16.04 LTS
+Nvidia Driver: 375.26
+CUDA: 8.0.61
+CUDNN: 5.1.5
 
 **AlexNet**
+
 ![Speed Benchmark](results/titan_x_pascal/alexnet_speed.png)
+
 ![GPU Memory Benchmark](results/titan_x_pascal/alexnet_gpu_memory.png)
 
 **ResNet50**
+
 ![Speed Benchmark](results/titan_x_pascal/resnet50_speed.png)
+
 ![GPU Memory Benchmark](results/titan_x_pascal/resnet50_gpu_memory.png)
 
 **ResNet101**
+
 ![Speed Benchmark](results/titan_x_pascal/resnet101_speed.png)
+
 ![GPU Memory Benchmark](results/titan_x_pascal/resnet101_gpu_memory.png)
 
 **ResNet152**
+
 ![Speed Benchmark](results/titan_x_pascal/resnet152_speed.png)
+
 ![GPU Memory Benchmark](results/titan_x_pascal/resnet152_gpu_memory.png)
+
+----------
 
 ### License
 This project is licensed under an [Apache-2.0](LICENSE) license.
