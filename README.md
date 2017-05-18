@@ -50,12 +50,6 @@ I may add benchmark code for more networks (i.e. inception-bn, inception-v3) and
 
 ![GPU Memory Benchmark](results/titan_x_pascal/vgg19_gpu_memory.png)
 
-**Inception-BN**
-
-![Speed Benchmark](results/titan_x_pascal/inception-bn_speed.png)
-
-![GPU Memory Benchmark](results/titan_x_pascal/inception-bn_gpu_memory.png)
-
 **Inception-V3**
 
 ![Speed Benchmark](results/titan_x_pascal/inception-v3_speed.png)
