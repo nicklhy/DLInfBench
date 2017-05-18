@@ -1,0 +1,1 @@
+mxnet inception-bn 8 651.237236 459

@@ -1,0 +1,1 @@
+caffe inception-bn 1 33.494159 1561

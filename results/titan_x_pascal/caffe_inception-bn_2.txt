@@ -1,0 +1,1 @@
+caffe inception-bn 2 61.895862 1561

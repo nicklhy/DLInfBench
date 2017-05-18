@@ -1,0 +1,1 @@
+caffe inception-bn 16 292.932153 2179

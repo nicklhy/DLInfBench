@@ -1,0 +1,1 @@
+caffe inception-v3 8 104.268618 2379
