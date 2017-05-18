@@ -11,8 +11,8 @@ DLLIB = 'mxnet'
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='test CNN inference speed')
     parser.add_argument('--network', type=str, default='resnet50',
-                        choices=['alexnet', 'inception-bn', 'inception-v3', 'resnet50', 'resnet101', 'resnet152',  'vgg19'],
-                        help = 'network')
+                        choices=['alexnet', 'inception-bn', 'inception-v3', 'resnet50', 'resnet101', 'resnet152',  'vgg16',  'vgg19'],
+                        help='network')
     parser.add_argument('--params', type=str, help='model parameters')
     parser.add_argument('--batch-size', type=int, default=1, help='batch size')
     parser.add_argument('--im-size', type=int, help='image size')
@@ -22,9 +22,6 @@ if __name__ == '__main__':
     parser.add_argument('--verbose', type=lambda x: x.lower() in ("yes", 'true', 't', '1'), default=True,
                         help='verbose information')
     args = parser.parse_args()
-
-    if args.network.startswith('inception'):
-        args.network = args.network.replace('-', '_')
 
     print('===================== benchmark for %s %s =====================' % (DLLIB, args.network))
     print('n_sample=%d, batch_size=%d, n_epoch=%d' %  (args.n_sample, args.batch_size, args.n_epoch))
@@ -36,7 +33,7 @@ if __name__ == '__main__':
         im_size = args.im_size
     elif args.network == 'alexnet':
         im_size = 227
-    elif args.network == 'inception_v3':
+    elif args.network == 'inception-v3':
         im_size = 299
 
     #  loading model

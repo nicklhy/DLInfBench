@@ -13,8 +13,8 @@ DLLIB = 'caffe'
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='test CNN inference speed')
     parser.add_argument('--network', type=str, default='resnet50',
-                        choices=['alexnet', 'resnet50', 'resnet101', 'resnet152', 'vgg16', 'vgg19'],
-                        help = 'network name')
+                        choices=['alexnet', 'resnet50', 'resnet101', 'resnet152', 'vgg16', 'vgg19', 'inception-bn', 'inception-v3'],
+                        help='network name')
     parser.add_argument('--params', type=str, help='model parameters')
     parser.add_argument('--batch-size', type=int, default=1, help='batch size')
     parser.add_argument('--im-size', type=int, help='image size')
