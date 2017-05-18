@@ -11,7 +11,7 @@ DLLIB = 'pytorch'
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='test CNN inference speed')
     parser.add_argument('--network', type=str, default='resnet50',
-                        choices=['alexnet', 'inception-bn', 'inception-v3', 'resnet50', 'resnet101', 'resnet152',  'vgg16',  'vgg19'],
+                        choices=['alexnet', 'inception-v3', 'resnet50', 'resnet101', 'resnet152',  'vgg16',  'vgg19'],
                         help='network name')
     parser.add_argument('--params', type=str, help='model parameters')
     parser.add_argument('--batch-size', type=int, default=1, help='batch size')
@@ -38,10 +38,10 @@ if __name__ == '__main__':
 
     #  loading model
     t1 = time.time()
-    if args.network not in torchvision.models.__dict__:
+    if args.network.replace('-', '_') not in torchvision.models.__dict__:
         print('%s doesn\'t exists!' % args.network)
         sys.exit(1)
-    net = torchvision.models.__dict__[args.network]()
+    net = torchvision.models.__dict__[args.network.replace('-', '_')]()
     if args.params is not None:
         net.load_state_dict(torch.load(args.params))
         print('Load parameters from %s' % (args.params))
