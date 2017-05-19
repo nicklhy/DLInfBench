@@ -22,6 +22,7 @@ I may add benchmark code for more networks (i.e. inception-bn, inception-v3) and
 
 ## Results
 1. Titan X (Pascal): [RESULT_TitanX.md](RESULT_TitanX.md).
+2. GeForce GTX 1080: [RESULT_GTX1080.md](RESULT_GTX1080.md).
 
 ## License
 This project is licensed under an [Apache-2.0](LICENSE) license.
