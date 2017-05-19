@@ -12,7 +12,7 @@ from models.tensorflow import nets_factory
 slim = tf.contrib.slim
 #  change DLLIB to the deep learning framework's name
 #  ...
-DLLIB = 'TensorFlow'
+DLLIB = 'tensorflow'
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='test CNN inference speed')
@@ -32,7 +32,7 @@ if __name__ == '__main__':
                         help='verbose information')
     args = parser.parse_args()
 
-    network_fn = nets_factory.get_network_fn(args.network, num_classes=1001, weight_decay=0.00004, is_training=False)
+    network_fn = nets_factory.get_network_fn(args.network, num_classes=1000, weight_decay=0.00004, is_training=False)
 
     print('===================== benchmark for %s %s =====================' % (DLLIB, args.network))
     print('n_sample=%d, batch size=%d, num epoch=%d' %  (args.n_sample, args.batch_size, args.n_epoch))
