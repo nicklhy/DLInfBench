@@ -1,1 +1,1 @@
-mxnet alexnet 4 848.865558 583
+mxnet alexnet 4 828.350432 583

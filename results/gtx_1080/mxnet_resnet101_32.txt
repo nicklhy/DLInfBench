@@ -1,1 +1,1 @@
-mxnet resnet101 32 246.105813 919
+mxnet resnet101 32 247.473800 919

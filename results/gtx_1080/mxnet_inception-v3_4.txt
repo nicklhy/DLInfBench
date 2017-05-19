@@ -1,1 +1,1 @@
-mxnet inception-v3 4 202.789975 485
+mxnet inception-v3 4 204.211894 485

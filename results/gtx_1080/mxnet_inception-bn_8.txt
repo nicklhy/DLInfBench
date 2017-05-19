@@ -1,1 +1,1 @@
-mxnet inception-bn 8 533.938795 429
+mxnet inception-bn 8 529.106959 427

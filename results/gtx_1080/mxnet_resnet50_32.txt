@@ -1,1 +1,1 @@
-mxnet resnet50 32 390.525257 817
+mxnet resnet50 32 400.426031 817

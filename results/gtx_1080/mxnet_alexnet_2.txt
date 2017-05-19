@@ -1,1 +1,1 @@
-mxnet alexnet 2 611.010508 577
+mxnet alexnet 2 621.325775 575

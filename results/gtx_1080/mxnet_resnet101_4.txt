@@ -1,1 +1,1 @@
-mxnet resnet101 4 182.786795 599
+mxnet resnet101 4 193.836813 599

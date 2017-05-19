@@ -1,1 +1,1 @@
-mxnet inception-bn 16 609.931773 605
+mxnet inception-bn 16 619.859999 605

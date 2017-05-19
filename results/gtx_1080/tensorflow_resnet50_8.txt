@@ -1,0 +1,1 @@
+tensorflow resnet50 8 300.030480 4323

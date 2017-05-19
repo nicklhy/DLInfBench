@@ -1,1 +1,1 @@
-mxnet alexnet 128 508.066676 1261
+mxnet alexnet 128 1196.992743 1261

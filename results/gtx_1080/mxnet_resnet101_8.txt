@@ -1,1 +1,1 @@
-mxnet resnet101 8 222.981523 637
+mxnet resnet101 8 220.932327 637

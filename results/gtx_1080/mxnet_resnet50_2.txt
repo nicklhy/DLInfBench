@@ -1,1 +1,1 @@
-mxnet resnet50 2 247.019227 477
+mxnet resnet50 2 247.930044 477

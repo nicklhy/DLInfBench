@@ -1,1 +1,1 @@
-mxnet resnet101 16 242.129034 701
+mxnet resnet101 16 246.968046 701

@@ -1,1 +1,1 @@
-mxnet resnet101 1 98.914375 567
+mxnet resnet101 1 97.072902 567

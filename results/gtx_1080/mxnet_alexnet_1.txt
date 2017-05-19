@@ -1,1 +1,1 @@
-mxnet alexnet 1 362.249324 563
+mxnet alexnet 1 383.901055 563

@@ -1,1 +1,1 @@
-mxnet alexnet 16 1252.616347 641
+mxnet alexnet 16 1286.235305 657
