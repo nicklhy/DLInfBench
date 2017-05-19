@@ -1,1 +1,1 @@
-tensorflow alexnet 128 1174.103315 8491
+tensorflow alexnet 128 3895.896508 4397

@@ -1,1 +1,1 @@
-tensorflow resnet50 32 529.502352 4365
+tensorflow resnet50 32 534.481906 4365

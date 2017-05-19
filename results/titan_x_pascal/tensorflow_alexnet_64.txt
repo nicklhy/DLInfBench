@@ -1,1 +1,1 @@
-tensorflow alexnet 64 1086.158033 6443
+tensorflow alexnet 64 3739.464239 2349

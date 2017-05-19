@@ -1,1 +1,1 @@
-tensorflow resnet152 4 132.966124 4365
+tensorflow resnet152 4 132.684589 4365

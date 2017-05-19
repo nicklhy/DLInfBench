@@ -1,1 +1,1 @@
-tensorflow vgg19 4 185.221122 6541
+tensorflow vgg19 4 181.920566 6541

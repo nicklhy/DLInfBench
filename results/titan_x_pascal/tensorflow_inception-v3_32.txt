@@ -1,1 +1,1 @@
-tensorflow inception-v3 32 281.716519 8461
+tensorflow inception-v3 32 279.543206 8461

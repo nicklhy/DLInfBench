@@ -1,1 +1,1 @@
-tensorflow vgg16 4 59.816042 6477
+tensorflow vgg16 4 213.148428 6541

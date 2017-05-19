@@ -10,7 +10,7 @@
 * Caffe2 GitHub hash: [df75c7f](https://github.com/caffe2/caffe2/commit/dd4cad03c5ad812c32d2b90f6a64c516edf75c7f)
 * MXNet GitHub hash: [5a7aa20](https://github.com/dmlc/mxnet/commit/5efd91a71f36fea483e882b0358c8d46b5a7aa20)
 * PyTorch version: 0.1.12_2
-* Tensorflow version: 1.0.1
+* Tensorflow version: 1.2.0-rc0
 
 ## AlexNet
 ![Speed Benchmark](results/titan_x_pascal/alexnet_speed.png)

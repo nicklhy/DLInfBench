@@ -1,1 +1,1 @@
-tensorflow alexnet 2 265.218875 6443
+tensorflow alexnet 2 785.824754 2349

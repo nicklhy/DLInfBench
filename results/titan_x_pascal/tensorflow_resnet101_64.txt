@@ -1,1 +1,1 @@
-tensorflow resnet101 64 332.578890 4367
+tensorflow resnet101 64 335.197100 4367
