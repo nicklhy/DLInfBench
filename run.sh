@@ -4,7 +4,7 @@ BATCH_SIZE_LIST="1 2 4 8 16 32 64 128"
 N_EPOCH=20
 DLLIB_LIST="caffe caffe2 mxnet pytorch tensorflow"
 
-trap 'echo you hit Ctrl-C/Ctrl-\, now exiting..; pkill -P $$; exit' SIGINT SIGQUIT
+trap 'echo you hit Ctrl-C/Ctrl-\, now exiting..; pkill -P $$; exit' INT QUIT
 for DLLIB in ${DLLIB_LIST}
 do
     for NETWORK in ${NETWORK_LIST}
