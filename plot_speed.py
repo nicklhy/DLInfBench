@@ -67,7 +67,7 @@ if __name__ == '__main__':
             plt.plot(results[dllib]['batch_size'], results[dllib][target.lower()], label=dllib, marker='x')
             if len(results[dllib]['batch_size']) > len(xticks):
                 xticks = results[dllib]['batch_size']
-        plt.legend(loc=2)
+        plt.legend(loc=4)
         plt.xticks(xticks)
         res_path = os.path.join(args.res_dir, '%s_%s.png' % (args.network, target.lower().replace(' ', '_')))
         print('Save %s benchmark results to: %s' % (target.lower(), res_path))
