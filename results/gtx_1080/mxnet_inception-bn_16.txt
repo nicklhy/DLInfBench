@@ -1,0 +1,1 @@
+mxnet inception-bn 16 609.931773 605

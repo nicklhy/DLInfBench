@@ -1,0 +1,1 @@
+mxnet inception-bn 128 355.353678 1459

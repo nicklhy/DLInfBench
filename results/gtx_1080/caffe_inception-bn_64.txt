@@ -1,0 +1,1 @@
+caffe inception-bn 64 345.878636 6905
