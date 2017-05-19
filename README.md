@@ -4,7 +4,7 @@
 ## Introduction
 Benchmarks of the CNN inference task over some popular deep learning frameworks.
 
-Currently, we support four deep learning frameworks: [Caffe](https://github.com/BVLC/caffe), [Caffe2](https://github.com/caffe2/caffe2), [PyTorch](https://github.com/pytorch/pytorch), [MXNet](https://github.com/dmlc/mxnet), [TensorFlow](https://github.com/tensorflow/tensorflow). Some commonly used imagenet models (i.e. alexnet, resnet50, resnet101 and resnet152) are ready to test. For convenience, we provide all the code or network definition files here. There is no need to download pre-trained weights because we will randomly initialize them.
+Currently, we support five deep learning frameworks: [Caffe](https://github.com/BVLC/caffe), [Caffe2](https://github.com/caffe2/caffe2), [PyTorch](https://github.com/pytorch/pytorch), [MXNet](https://github.com/dmlc/mxnet), [TensorFlow](https://github.com/tensorflow/tensorflow). Some commonly used imagenet models (i.e. alexnet, resnet50, resnet101 and resnet152) are ready to test. For convenience, we provide all the code or network definition files here. There is no need to download pre-trained weights because we will randomly initialize them.
 
 I may add benchmark code for more networks (i.e. inception-bn, inception-v3) and deep learning frameworks in the future but no specific plans have been made yet. Thus, anyone is welcomed to submit PRs.
 
