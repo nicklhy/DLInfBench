@@ -1,0 +1,1 @@
+tensorflow resnet101 32 319.851003 4367

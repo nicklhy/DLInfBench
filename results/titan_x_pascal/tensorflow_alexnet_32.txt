@@ -1,0 +1,1 @@
+tensorflow alexnet 32 1077.218046 6443

@@ -1,0 +1,1 @@
+tensorflow alexnet 64 1086.158033 6443

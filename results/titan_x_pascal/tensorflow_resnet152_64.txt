@@ -1,0 +1,1 @@
+tensorflow resnet152 64 233.006043 4365

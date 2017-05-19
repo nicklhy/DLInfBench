@@ -1,0 +1,1 @@
+tensorflow resnet50 2 214.662491 4365
