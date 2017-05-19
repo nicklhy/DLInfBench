@@ -3,7 +3,7 @@
 NETWORK_LIST="alexnet vgg16 vgg19 inception-bn inception-v3 resnet50 resnet101 resnet152"
 GPU=0
 BATCH_SIZE_LIST="1 2 4 8 16 32 64 128"
-N_EPOCH=20
+N_EPOCH=10
 DLLIB_LIST="caffe caffe2 mxnet pytorch tensorflow"
 
 trap 'echo you hit Ctrl-C/Ctrl-\, now exiting..; pkill -P $$; exit' INT QUIT
