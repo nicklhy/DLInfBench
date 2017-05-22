@@ -24,6 +24,10 @@
 ![Speed Benchmark](results/gtx_1080/vgg19_speed.png)
 ![GPU Memory Benchmark](results/gtx_1080/vgg19_gpu_memory.png)
 
+## Inception-BN
+![Speed Benchmark](results/gtx_1080/inception-bn_speed.png)
+![GPU Memory Benchmark](results/gtx_1080/inception-bn_gpu_memory.png)
+
 ## Inception-V3
 ![Speed Benchmark](results/gtx_1080/inception-v3_speed.png)
 ![GPU Memory Benchmark](results/gtx_1080/inception-v3_gpu_memory.png)
