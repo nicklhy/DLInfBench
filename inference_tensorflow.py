@@ -17,7 +17,7 @@ DLLIB = 'tensorflow'
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='test CNN inference speed')
     parser.add_argument('--network', type=str, default='resnet50',
-                        choices=['alexnet', 'inception-v1', 'inception-bn', 'inception-v3',
+                        choices=['alexnet-v2', 'inception-v1', 'inception-bn', 'inception-v3',
                                  'inception-v4', 'inception-resnet-v2', 'resnet50', 'resnet101', 'resnet152',
                                  'resnet200', 'resnet_v2_50', 'resnet_v2_101', 'resnet_v2_152', 'resnet_v2_200',
                                  'vgga', 'vgg16', 'vgg19'],

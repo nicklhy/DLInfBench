@@ -29,7 +29,7 @@ from . import vgg
 
 slim = tf.contrib.slim
 
-networks_map = {'alexnet': alexnet.alexnet_v2,
+networks_map = {'alexnet-v2': alexnet.alexnet_v2,
                 'vgga': vgg.vgg_a,
                 'vgg16': vgg.vgg_16,
                 'vgg19': vgg.vgg_19,
@@ -48,7 +48,7 @@ networks_map = {'alexnet': alexnet.alexnet_v2,
                 'resnet_v2_200': resnet_v2.resnet_v2_200,
                }
 
-arg_scopes_map = {'alexnet': alexnet.alexnet_v2_arg_scope,
+arg_scopes_map = {'alexnet-v2': alexnet.alexnet_v2_arg_scope,
                   'vgga': vgg.vgg_arg_scope,
                   'vgg16': vgg.vgg_arg_scope,
                   'vgg19': vgg.vgg_arg_scope,
