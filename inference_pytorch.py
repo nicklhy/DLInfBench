@@ -66,6 +66,14 @@ if __name__ == '__main__':
     t2 = time.time()
     print('Generate %d random images in %.4fs!' % (args.n_sample, t2-t1))
 
+    # warm-up, 10 iterations
+    for i, (batch_input, batch_target) in enumerate(data_loader):
+        if i >= 10:
+            break
+        batch_input_var = torch.autograd.Variable(batch_input, volatile=True).cuda(device_id=gpus[0])
+        output = net(batch_input_var)
+    print('Warm-up for 10 iterations')
+
     t_list = []
     t_start = time.time()
     for i in range(args.n_epoch):

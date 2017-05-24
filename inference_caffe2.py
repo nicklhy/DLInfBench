@@ -238,11 +238,11 @@ if __name__ == '__main__':
     t2 = time.time()
     print('Generate %d random images in %.4fs!' % (args.n_sample, t2-t1))
 
-    # dry run
-    for i in range(5):
+    # warm-up, 10 iterations
+    for i in range(10):
         workspace.FeedBlob('data', data_list[i], device_opts)
         workspace.RunNet(net_def.name, 1)
-    print('Finish dry run(5 times)')
+    print('Finish dry run(10 times)')
 
     t_list = []
     t_start = time.time()

@@ -84,9 +84,10 @@ if __name__ == '__main__':
     t2 = time.time()
     print('Generate %d random images in %.4fs!' % (args.n_sample, t2-t1))
 
-    # Run 1 epoch so that TF allocate the gpu memory
-    for j, batch in enumerate(data_list[0:2]):
+    # warm-up, 10 iterations
+    for j, batch in enumerate(data_list[0:10]):
         output = sess.run([logits], feed_dict={inputs:batch})
+    print('Warm-up for 10 iterations')
 
     t_list = []
     t_start = time.time()

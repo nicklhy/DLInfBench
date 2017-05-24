@@ -66,6 +66,13 @@ if __name__ == '__main__':
     t2 = time.time()
     print('Generate %d random images in %.4fs!' % (args.n_sample, t2-t1))
 
+    # warm-up, 10 iterations
+    for i in range(10):
+        # forward
+        # ...
+        pass
+    print('Warm-up for 10 iterations')
+
     t_list = []
     t_start = time.time()
     for i in range(args.n_epoch):

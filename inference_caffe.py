@@ -61,6 +61,14 @@ if __name__ == '__main__':
     t2 = time.time()
     print('Loading images in %.4fs!' % (t2-t1))
 
+    # warm-up, 10 iterations
+    for i, batch in enumerate(data_list):
+        if i >= 10:
+            break
+        net.blobs['data'].data[...] = batch
+        output = net.forward()
+    print('Warm-up for 10 iterations')
+
     t_list = []
     t_start = time.time()
     for i in range(args.n_epoch):
