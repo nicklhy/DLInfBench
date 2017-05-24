@@ -1,1 +1,1 @@
-mxnet resnet152 8 211.297766 749
+mxnet resnet152 8 216.849753 751

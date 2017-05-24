@@ -1,1 +1,1 @@
-mxnet resnet152 1 72.659890 679
+mxnet resnet152 1 74.573956 681
