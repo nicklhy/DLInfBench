@@ -1,0 +1,1 @@
+pytorch alexnet 64 742.643911 723

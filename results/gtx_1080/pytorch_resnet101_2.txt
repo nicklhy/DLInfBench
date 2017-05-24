@@ -1,0 +1,1 @@
+pytorch resnet101 2 77.147173 545

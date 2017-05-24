@@ -1,0 +1,1 @@
+pytorch alexnet 16 652.601992 593

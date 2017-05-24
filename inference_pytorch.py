@@ -21,7 +21,12 @@ if __name__ == '__main__':
     parser.add_argument('--n-epoch', type=int, default=10, help='number of epochs')
     parser.add_argument('--verbose', type=lambda x: x.lower() in ("yes", 'true', 't', '1'), default=True,
                         help='verbose information')
+    parser.add_argument('--cudnn', type=lambda x: x.lower() in ("yes", 'true', 't', '1'), default=True,
+                        help='enable cudnn or not')
     args = parser.parse_args()
+
+    if not args.cudnn:
+        torch.backends.cudnn.enabled=False
 
     gpus = [int(i) for i in args.gpu.split(',')]
 
