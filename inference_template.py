@@ -21,6 +21,7 @@ if __name__ == '__main__':
     parser.add_argument('--n-sample', type=int, default=1000, help='number of samples')
     parser.add_argument('--gpu', type=str, default='0', help='gpu device')
     parser.add_argument('--n-epoch', type=int, default=10, help='number of epochs')
+    parser.add_argument('--warm-up-num', type=int, default=100, help='number of iterations for warming up')
     parser.add_argument('--verbose', type=lambda x: x.lower() in ("yes", 'true', 't', '1'), default=True,
                         help='verbose information')
     args = parser.parse_args()
@@ -63,15 +64,22 @@ if __name__ == '__main__':
     #  transform the data from numpy.ndarrays to the needed format(i.e. torch.Tensor)
     #  ...
 
+    data_list = [data]
+
     t2 = time.time()
     print('Generate %d random images in %.4fs!' % (args.n_sample, t2-t1))
 
-    # warm-up, 10 iterations
-    for i in range(10):
-        # forward
-        # ...
-        pass
-    print('Warm-up for 10 iterations')
+    # warm-up to burn your GPU to working temperature (usually around 80C) to get stable numbers
+    k = 0
+    while k < args.warm_up_num:
+        for batch in data_list:
+            if k >= args.warm_up_num:
+                break
+            k += 1
+            # forward
+            # ...
+            pass
+    print('Warm-up for %d iterations' % args.warm_up_num)
 
     t_list = []
     t_start = time.time()
