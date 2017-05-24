@@ -1,1 +1,1 @@
-mxnet alexnet 1 460.149258 593
+mxnet alexnet 1 468.662964 595

@@ -1,1 +1,1 @@
-mxnet alexnet 128 1389.641172 1291
+mxnet alexnet 128 1342.492282 1293

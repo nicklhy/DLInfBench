@@ -1,1 +1,1 @@
-mxnet alexnet 64 1489.636783 947
+mxnet alexnet 64 1443.326092 949

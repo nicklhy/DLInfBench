@@ -1,1 +1,1 @@
-mxnet alexnet 32 1771.543280 773
+mxnet alexnet 32 1733.751776 775

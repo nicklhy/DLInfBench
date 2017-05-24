@@ -1,1 +1,1 @@
-mxnet alexnet 8 1566.693805 641
+mxnet alexnet 8 1511.132060 643

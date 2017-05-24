@@ -1,1 +1,1 @@
-mxnet alexnet 2 765.094588 607
+mxnet alexnet 2 738.736337 609
