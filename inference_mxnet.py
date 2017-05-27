@@ -19,7 +19,7 @@ if __name__ == '__main__':
     parser.add_argument('--n-sample', type=int, default=1000, help='number of samples')
     parser.add_argument('--gpu', type=str, default='0', help='gpu device')
     parser.add_argument('--n-epoch', type=int, default=10, help='number of epochs')
-    parser.add_argument('--warm-up-num', type=int, default=100, help='number of iterations for warming up')
+    parser.add_argument('--warm-up-num', type=int, default=10, help='number of iterations for warming up')
     parser.add_argument('--verbose', type=lambda x: x.lower() in ("yes", 'true', 't', '1'), default=True,
                         help='verbose information')
     args = parser.parse_args()
