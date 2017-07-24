@@ -1,0 +1,1 @@
+pytorch inception-v3 16 418.927310 973

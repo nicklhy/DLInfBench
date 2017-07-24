@@ -1,0 +1,1 @@
+tensorflow inception-bn 8 651.939558 1041

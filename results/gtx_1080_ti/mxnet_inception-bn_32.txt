@@ -1,0 +1,1 @@
+mxnet inception-bn 32 1106.577246 617

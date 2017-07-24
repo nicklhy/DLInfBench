@@ -1,0 +1,1 @@
+mxnet inception-bn 64 1175.110709 887

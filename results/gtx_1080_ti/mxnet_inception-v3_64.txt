@@ -1,0 +1,1 @@
+mxnet inception-v3 64 493.129106 1401

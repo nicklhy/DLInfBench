@@ -1,0 +1,1 @@
+pytorch resnet50 2 334.978234 617
