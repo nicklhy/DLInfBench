@@ -22,6 +22,9 @@ if __name__ == '__main__':
                                  'resnet200', 'resnet_v2_50', 'resnet_v2_101', 'resnet_v2_152', 'resnet_v2_200',
                                  'vgga', 'vgg16', 'vgg19'],
                         help = 'network name')
+    parser.add_argument('--dtype', type=str, default='float32',
+                        choices=['float32', 'float16'],
+                        help='data type')
     parser.add_argument('--params', type=str, help='model parameters')
     parser.add_argument('--batch-size', type=int, default=1, help='batch size')
     parser.add_argument('--im-size', type=int, help='image size')
@@ -134,6 +137,10 @@ if __name__ == '__main__':
     if not os.path.exists(res_dir):
         os.makedirs(res_dir)
 
-    res_file_path = os.path.join(res_dir, '%s_%s_%d.txt' % (DLLIB, args.network, args.batch_size))
+    res_file_path = os.path.join(res_dir, '%s_%s_%s_%d.txt' % (DLLIB,
+                                                               args.network,
+                                                               args.dtype,
+                                                               args.batch_size))
     with open(res_file_path, 'w') as fd:
-        fd.write('%s %s %d %f %d' % (DLLIB, args.network, args.batch_size, args.n_sample/t_avg, gpu_mem))
+        fd.write('%s %s %s %d %f %d' % (DLLIB, args.network, args.dtype,
+                                        args.batch_size, args.n_sample/t_avg, gpu_mem))

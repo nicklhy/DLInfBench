@@ -20,20 +20,22 @@ if __name__ == '__main__':
         sys.exit(1)
     for fpath in file_list:
         fname = os.path.split(fpath)[-1]
-        dllib, network, batch_size = os.path.splitext(fname)[0].split('_')
+        dllib, network, dtype, batch_size = os.path.splitext(fname)[0].split('_')
         speed = -1
         gpu_mem = -1
         batch_size = int(batch_size)
         with open(fpath, 'r') as fd:
-            _dllib, _network, _batch_size, speed, gpu_mem = fd.readline().strip().split()
+            _dllib, _network, _dtype, _batch_size, speed, gpu_mem = fd.readline().strip().split()
             assert(_dllib==dllib)
             assert(_network==network)
             assert(_network==args.network)
+            assert(_dtype==dtype)
             assert(int(_batch_size)==batch_size)
             gpu_mem = int(gpu_mem)
             speed = float(speed)
-        if dllib not in results:
-            results[dllib] = {
+        name = dllib+'_'+dtype
+        if name not in results:
+            results[name] = {
                 'batch_size': [],
                 'speed': [],
                 'gpu memory': [],
@@ -41,15 +43,15 @@ if __name__ == '__main__':
         if speed == -1 or batch_size == -1:
             #  skip if failed
             continue
-        results[dllib]['batch_size'].append(batch_size)
-        results[dllib]['gpu memory'].append(gpu_mem)
-        results[dllib]['speed'].append(speed)
+        results[name]['batch_size'].append(batch_size)
+        results[name]['gpu memory'].append(gpu_mem)
+        results[name]['speed'].append(speed)
 
-    for dllib in results.keys():
-        ind_sort = np.argsort(results[dllib]['batch_size'])
-        for k in results[dllib].keys():
+    for name in results.keys():
+        ind_sort = np.argsort(results[name]['batch_size'])
+        for k in results[name].keys():
             #  sort by batch size
-            results[dllib][k] = [results[dllib][k][i] for i in ind_sort]
+            results[name][k] = [results[name][k][i] for i in ind_sort]
 
     print('Read results: %s' % results)
 
@@ -63,10 +65,10 @@ if __name__ == '__main__':
             plt.ylabel('GPU Memory(MB)')
         plt.xlabel('Batch Size')
         xticks = []
-        for dllib in results:
-            plt.plot(results[dllib]['batch_size'], results[dllib][target.lower()], label=dllib, marker='x')
-            if len(results[dllib]['batch_size']) > len(xticks):
-                xticks = results[dllib]['batch_size']
+        for name in results:
+            plt.plot(results[name]['batch_size'], results[name][target.lower()], label=name, marker='x')
+            if len(results[name]['batch_size']) > len(xticks):
+                xticks = results[name]['batch_size']
         plt.legend(loc=4)
         plt.xticks(xticks)
         res_path = os.path.join(args.res_dir, '%s_%s.png' % (args.network, target.lower().replace(' ', '_')))
