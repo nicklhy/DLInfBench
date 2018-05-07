@@ -7,14 +7,14 @@
     }, 
     {
       "op": "Cast", 
-      "name": "cast10", 
-      "attrs": {"dtype": "float16"}, 
+      "name": "cast2", 
+      "attr": {"dtype": "float16"}, 
       "inputs": [[0, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "conv1_1_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "64", 
         "pad": "(1, 1)"
@@ -24,7 +24,7 @@
     {
       "op": "null", 
       "name": "conv1_1_bias", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "64", 
         "pad": "(1, 1)"
@@ -34,7 +34,7 @@
     {
       "op": "Convolution", 
       "name": "conv1_1", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "64", 
         "pad": "(1, 1)"
@@ -44,13 +44,13 @@
     {
       "op": "Activation", 
       "name": "relu1_1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[4, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "conv1_2_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "64", 
         "pad": "(1, 1)"
@@ -60,7 +60,7 @@
     {
       "op": "null", 
       "name": "conv1_2_bias", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "64", 
         "pad": "(1, 1)"
@@ -70,7 +70,7 @@
     {
       "op": "Convolution", 
       "name": "conv1_2", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "64", 
         "pad": "(1, 1)"
@@ -80,13 +80,13 @@
     {
       "op": "Activation", 
       "name": "relu1_2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[8, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "pool1", 
-      "attrs": {
+      "attr": {
         "kernel": "(2, 2)", 
         "pool_type": "max", 
         "stride": "(2, 2)"
@@ -96,7 +96,7 @@
     {
       "op": "null", 
       "name": "conv2_1_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "128", 
         "pad": "(1, 1)"
@@ -106,7 +106,7 @@
     {
       "op": "null", 
       "name": "conv2_1_bias", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "128", 
         "pad": "(1, 1)"
@@ -116,7 +116,7 @@
     {
       "op": "Convolution", 
       "name": "conv2_1", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "128", 
         "pad": "(1, 1)"
@@ -126,13 +126,13 @@
     {
       "op": "Activation", 
       "name": "relu2_1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[13, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "conv2_2_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "128", 
         "pad": "(1, 1)"
@@ -142,7 +142,7 @@
     {
       "op": "null", 
       "name": "conv2_2_bias", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "128", 
         "pad": "(1, 1)"
@@ -152,7 +152,7 @@
     {
       "op": "Convolution", 
       "name": "conv2_2", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "128", 
         "pad": "(1, 1)"
@@ -162,13 +162,13 @@
     {
       "op": "Activation", 
       "name": "relu2_2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[17, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "pool2", 
-      "attrs": {
+      "attr": {
         "kernel": "(2, 2)", 
         "pool_type": "max", 
         "stride": "(2, 2)"
@@ -178,7 +178,7 @@
     {
       "op": "null", 
       "name": "conv3_1_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "256", 
         "pad": "(1, 1)"
@@ -188,7 +188,7 @@
     {
       "op": "null", 
       "name": "conv3_1_bias", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "256", 
         "pad": "(1, 1)"
@@ -198,7 +198,7 @@
     {
       "op": "Convolution", 
       "name": "conv3_1", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "256", 
         "pad": "(1, 1)"
@@ -208,13 +208,13 @@
     {
       "op": "Activation", 
       "name": "relu3_1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[22, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "conv3_2_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "256", 
         "pad": "(1, 1)"
@@ -224,7 +224,7 @@
     {
       "op": "null", 
       "name": "conv3_2_bias", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "256", 
         "pad": "(1, 1)"
@@ -234,7 +234,7 @@
     {
       "op": "Convolution", 
       "name": "conv3_2", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "256", 
         "pad": "(1, 1)"
@@ -244,13 +244,13 @@
     {
       "op": "Activation", 
       "name": "relu3_2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[26, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "conv3_3_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "256", 
         "pad": "(1, 1)"
@@ -260,7 +260,7 @@
     {
       "op": "null", 
       "name": "conv3_3_bias", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "256", 
         "pad": "(1, 1)"
@@ -270,7 +270,7 @@
     {
       "op": "Convolution", 
       "name": "conv3_3", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "256", 
         "pad": "(1, 1)"
@@ -280,13 +280,13 @@
     {
       "op": "Activation", 
       "name": "relu3_3", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[30, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "pool3", 
-      "attrs": {
+      "attr": {
         "kernel": "(2, 2)", 
         "pool_type": "max", 
         "stride": "(2, 2)"
@@ -296,7 +296,7 @@
     {
       "op": "null", 
       "name": "conv4_1_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -306,7 +306,7 @@
     {
       "op": "null", 
       "name": "conv4_1_bias", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -316,7 +316,7 @@
     {
       "op": "Convolution", 
       "name": "conv4_1", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -326,13 +326,13 @@
     {
       "op": "Activation", 
       "name": "relu4_1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[35, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "conv4_2_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -342,7 +342,7 @@
     {
       "op": "null", 
       "name": "conv4_2_bias", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -352,7 +352,7 @@
     {
       "op": "Convolution", 
       "name": "conv4_2", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -362,13 +362,13 @@
     {
       "op": "Activation", 
       "name": "relu4_2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[39, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "conv4_3_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -378,7 +378,7 @@
     {
       "op": "null", 
       "name": "conv4_3_bias", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -388,7 +388,7 @@
     {
       "op": "Convolution", 
       "name": "conv4_3", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -398,13 +398,13 @@
     {
       "op": "Activation", 
       "name": "relu4_3", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[43, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "pool4", 
-      "attrs": {
+      "attr": {
         "kernel": "(2, 2)", 
         "pool_type": "max", 
         "stride": "(2, 2)"
@@ -414,7 +414,7 @@
     {
       "op": "null", 
       "name": "conv5_1_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -424,7 +424,7 @@
     {
       "op": "null", 
       "name": "conv5_1_bias", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -434,7 +434,7 @@
     {
       "op": "Convolution", 
       "name": "conv5_1", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -444,13 +444,13 @@
     {
       "op": "Activation", 
       "name": "relu5_1", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[48, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "conv5_2_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -460,7 +460,7 @@
     {
       "op": "null", 
       "name": "conv5_2_bias", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -470,7 +470,7 @@
     {
       "op": "Convolution", 
       "name": "conv5_2", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -480,13 +480,13 @@
     {
       "op": "Activation", 
       "name": "relu5_2", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[52, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "conv5_3_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -496,7 +496,7 @@
     {
       "op": "null", 
       "name": "conv5_3_bias", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -506,7 +506,7 @@
     {
       "op": "Convolution", 
       "name": "conv5_3", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "num_filter": "512", 
         "pad": "(1, 1)"
@@ -516,13 +516,13 @@
     {
       "op": "Activation", 
       "name": "relu5_3", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[56, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "pool5", 
-      "attrs": {
+      "attr": {
         "kernel": "(2, 2)", 
         "pool_type": "max", 
         "stride": "(2, 2)"
@@ -537,85 +537,85 @@
     {
       "op": "null", 
       "name": "fc6_weight", 
-      "attrs": {"num_hidden": "4096"}, 
+      "attr": {"num_hidden": "4096"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "fc6_bias", 
-      "attrs": {"num_hidden": "4096"}, 
+      "attr": {"num_hidden": "4096"}, 
       "inputs": []
     }, 
     {
       "op": "FullyConnected", 
       "name": "fc6", 
-      "attrs": {"num_hidden": "4096"}, 
+      "attr": {"num_hidden": "4096"}, 
       "inputs": [[59, 0, 0], [60, 0, 0], [61, 0, 0]]
     }, 
     {
       "op": "Activation", 
       "name": "relu6", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[62, 0, 0]]
     }, 
     {
       "op": "Dropout", 
       "name": "drop6", 
-      "attrs": {"p": "0.5"}, 
+      "attr": {"p": "0.5"}, 
       "inputs": [[63, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "fc7_weight", 
-      "attrs": {"num_hidden": "4096"}, 
+      "attr": {"num_hidden": "4096"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "fc7_bias", 
-      "attrs": {"num_hidden": "4096"}, 
+      "attr": {"num_hidden": "4096"}, 
       "inputs": []
     }, 
     {
       "op": "FullyConnected", 
       "name": "fc7", 
-      "attrs": {"num_hidden": "4096"}, 
+      "attr": {"num_hidden": "4096"}, 
       "inputs": [[64, 0, 0], [65, 0, 0], [66, 0, 0]]
     }, 
     {
       "op": "Activation", 
       "name": "relu7", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[67, 0, 0]]
     }, 
     {
       "op": "Dropout", 
       "name": "drop7", 
-      "attrs": {"p": "0.5"}, 
+      "attr": {"p": "0.5"}, 
       "inputs": [[68, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "fc8_weight", 
-      "attrs": {"num_hidden": "1000"}, 
+      "attr": {"num_hidden": "1000"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "fc8_bias", 
-      "attrs": {"num_hidden": "1000"}, 
+      "attr": {"num_hidden": "1000"}, 
       "inputs": []
     }, 
     {
       "op": "FullyConnected", 
       "name": "fc8", 
-      "attrs": {"num_hidden": "1000"}, 
+      "attr": {"num_hidden": "1000"}, 
       "inputs": [[69, 0, 0], [70, 0, 0], [71, 0, 0]]
     }, 
     {
       "op": "Cast", 
-      "name": "cast11", 
-      "attrs": {"dtype": "float32"}, 
+      "name": "cast3", 
+      "attr": {"dtype": "float32"}, 
       "inputs": [[72, 0, 0]]
     }, 
     {
@@ -745,5 +745,5 @@
     78
   ], 
   "heads": [[75, 0, 0]], 
-  "attrs": {"mxnet_version": ["int", 10200]}
+  "attrs": {"mxnet_version": ["int", 1000]}
 }

@@ -7,14 +7,14 @@
     }, 
     {
       "op": "Cast", 
-      "name": "cast8", 
-      "attrs": {"dtype": "float16"}, 
+      "name": "cast4", 
+      "attr": {"dtype": "float16"}, 
       "inputs": [[0, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "32", 
@@ -26,7 +26,7 @@
     {
       "op": "Convolution", 
       "name": "conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "32", 
@@ -38,19 +38,19 @@
     {
       "op": "null", 
       "name": "conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -59,7 +59,7 @@
     {
       "op": "null", 
       "name": "conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -68,19 +68,19 @@
     {
       "op": "BatchNorm", 
       "name": "conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[3, 0, 0], [4, 0, 0], [5, 0, 0], [6, 0, 1], [7, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[8, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "32", 
@@ -92,7 +92,7 @@
     {
       "op": "Convolution", 
       "name": "conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "32", 
@@ -104,19 +104,19 @@
     {
       "op": "null", 
       "name": "conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -125,7 +125,7 @@
     {
       "op": "null", 
       "name": "conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -134,19 +134,19 @@
     {
       "op": "BatchNorm", 
       "name": "conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[11, 0, 0], [12, 0, 0], [13, 0, 0], [14, 0, 1], [15, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[16, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "conv_2_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -158,7 +158,7 @@
     {
       "op": "Convolution", 
       "name": "conv_2_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -170,19 +170,19 @@
     {
       "op": "null", 
       "name": "conv_2_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "conv_2_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "conv_2_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -191,7 +191,7 @@
     {
       "op": "null", 
       "name": "conv_2_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -200,19 +200,19 @@
     {
       "op": "BatchNorm", 
       "name": "conv_2_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[19, 0, 0], [20, 0, 0], [21, 0, 0], [22, 0, 1], [23, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "conv_2_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[24, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "pool", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "pool_type": "max", 
         "stride": "(2, 2)"
@@ -222,7 +222,7 @@
     {
       "op": "null", 
       "name": "conv_3_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "80", 
@@ -234,7 +234,7 @@
     {
       "op": "Convolution", 
       "name": "conv_3_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "80", 
@@ -246,19 +246,19 @@
     {
       "op": "null", 
       "name": "conv_3_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "conv_3_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "conv_3_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -267,7 +267,7 @@
     {
       "op": "null", 
       "name": "conv_3_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -276,19 +276,19 @@
     {
       "op": "BatchNorm", 
       "name": "conv_3_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[28, 0, 0], [29, 0, 0], [30, 0, 0], [31, 0, 1], [32, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "conv_3_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[33, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "conv_4_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -300,7 +300,7 @@
     {
       "op": "Convolution", 
       "name": "conv_4_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -312,19 +312,19 @@
     {
       "op": "null", 
       "name": "conv_4_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "conv_4_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "conv_4_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -333,7 +333,7 @@
     {
       "op": "null", 
       "name": "conv_4_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -342,19 +342,19 @@
     {
       "op": "BatchNorm", 
       "name": "conv_4_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[36, 0, 0], [37, 0, 0], [38, 0, 0], [39, 0, 1], [40, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "conv_4_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[41, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "pool1", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "pool_type": "max", 
         "stride": "(2, 2)"
@@ -364,7 +364,7 @@
     {
       "op": "null", 
       "name": "mixed_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -376,7 +376,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -388,19 +388,19 @@
     {
       "op": "null", 
       "name": "mixed_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -409,7 +409,7 @@
     {
       "op": "null", 
       "name": "mixed_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -418,19 +418,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[45, 0, 0], [46, 0, 0], [47, 0, 0], [48, 0, 1], [49, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[50, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "48", 
@@ -442,7 +442,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_tower_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "48", 
@@ -454,19 +454,19 @@
     {
       "op": "null", 
       "name": "mixed_tower_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -475,7 +475,7 @@
     {
       "op": "null", 
       "name": "mixed_tower_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -484,19 +484,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_tower_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[53, 0, 0], [54, 0, 0], [55, 0, 0], [56, 0, 1], [57, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_tower_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[58, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(5, 5)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -508,7 +508,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_tower_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(5, 5)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -520,19 +520,19 @@
     {
       "op": "null", 
       "name": "mixed_tower_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -541,7 +541,7 @@
     {
       "op": "null", 
       "name": "mixed_tower_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -550,19 +550,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_tower_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[61, 0, 0], [62, 0, 0], [63, 0, 0], [64, 0, 1], [65, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_tower_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[66, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -574,7 +574,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_tower_1_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -586,19 +586,19 @@
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -607,7 +607,7 @@
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -616,19 +616,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_tower_1_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[69, 0, 0], [70, 0, 0], [71, 0, 0], [72, 0, 1], [73, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_tower_1_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[74, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -640,7 +640,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_tower_1_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -652,19 +652,19 @@
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -673,7 +673,7 @@
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -682,19 +682,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_tower_1_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[77, 0, 0], [78, 0, 0], [79, 0, 0], [80, 0, 1], [81, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_tower_1_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[82, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_2_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -706,7 +706,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_tower_1_conv_2_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -718,19 +718,19 @@
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_2_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_2_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_2_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -739,7 +739,7 @@
     {
       "op": "null", 
       "name": "mixed_tower_1_conv_2_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -748,19 +748,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_tower_1_conv_2_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[85, 0, 0], [86, 0, 0], [87, 0, 0], [88, 0, 1], [89, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_tower_1_conv_2_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[90, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "avg_pool_mixed_pool", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "pad": "(1, 1)", 
         "pool_type": "avg", 
@@ -771,7 +771,7 @@
     {
       "op": "null", 
       "name": "mixed_tower_2_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "32", 
@@ -783,7 +783,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_tower_2_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "32", 
@@ -795,19 +795,19 @@
     {
       "op": "null", 
       "name": "mixed_tower_2_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_2_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_tower_2_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -816,7 +816,7 @@
     {
       "op": "null", 
       "name": "mixed_tower_2_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -825,25 +825,25 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_tower_2_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[94, 0, 0], [95, 0, 0], [96, 0, 0], [97, 0, 1], [98, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_tower_2_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[99, 0, 0]]
     }, 
     {
       "op": "Concat", 
       "name": "ch_concat_mixed_chconcat", 
-      "attrs": {"num_args": "4"}, 
+      "attr": {"num_args": "4"}, 
       "inputs": [[51, 0, 0], [67, 0, 0], [91, 0, 0], [100, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_1_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -855,7 +855,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_1_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -867,19 +867,19 @@
     {
       "op": "null", 
       "name": "mixed_1_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_1_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_1_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -888,7 +888,7 @@
     {
       "op": "null", 
       "name": "mixed_1_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -897,19 +897,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_1_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[103, 0, 0], [104, 0, 0], [105, 0, 0], [106, 0, 1], [107, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_1_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[108, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "48", 
@@ -921,7 +921,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_1_tower_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "48", 
@@ -933,19 +933,19 @@
     {
       "op": "null", 
       "name": "mixed_1_tower_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -954,7 +954,7 @@
     {
       "op": "null", 
       "name": "mixed_1_tower_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -963,19 +963,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_1_tower_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[111, 0, 0], [112, 0, 0], [113, 0, 0], [114, 0, 1], [115, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_1_tower_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[116, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(5, 5)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -987,7 +987,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_1_tower_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(5, 5)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -999,19 +999,19 @@
     {
       "op": "null", 
       "name": "mixed_1_tower_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1020,7 +1020,7 @@
     {
       "op": "null", 
       "name": "mixed_1_tower_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1029,19 +1029,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_1_tower_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[119, 0, 0], [120, 0, 0], [121, 0, 0], [122, 0, 1], [123, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_1_tower_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[124, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -1053,7 +1053,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_1_tower_1_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -1065,19 +1065,19 @@
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1086,7 +1086,7 @@
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1095,19 +1095,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_1_tower_1_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[127, 0, 0], [128, 0, 0], [129, 0, 0], [130, 0, 1], [131, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_1_tower_1_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[132, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -1119,7 +1119,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_1_tower_1_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -1131,19 +1131,19 @@
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1152,7 +1152,7 @@
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1161,19 +1161,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_1_tower_1_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[135, 0, 0], [136, 0, 0], [137, 0, 0], [138, 0, 1], [139, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_1_tower_1_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[140, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_2_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -1185,7 +1185,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_1_tower_1_conv_2_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -1197,19 +1197,19 @@
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_2_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_2_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_2_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1218,7 +1218,7 @@
     {
       "op": "null", 
       "name": "mixed_1_tower_1_conv_2_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1227,19 +1227,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_1_tower_1_conv_2_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[143, 0, 0], [144, 0, 0], [145, 0, 0], [146, 0, 1], [147, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_1_tower_1_conv_2_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[148, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "avg_pool_mixed_1_pool", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "pad": "(1, 1)", 
         "pool_type": "avg", 
@@ -1250,7 +1250,7 @@
     {
       "op": "null", 
       "name": "mixed_1_tower_2_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -1262,7 +1262,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_1_tower_2_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -1274,19 +1274,19 @@
     {
       "op": "null", 
       "name": "mixed_1_tower_2_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_2_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_1_tower_2_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1295,7 +1295,7 @@
     {
       "op": "null", 
       "name": "mixed_1_tower_2_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1304,25 +1304,25 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_1_tower_2_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[152, 0, 0], [153, 0, 0], [154, 0, 0], [155, 0, 1], [156, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_1_tower_2_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[157, 0, 0]]
     }, 
     {
       "op": "Concat", 
       "name": "ch_concat_mixed_1_chconcat", 
-      "attrs": {"num_args": "4"}, 
+      "attr": {"num_args": "4"}, 
       "inputs": [[109, 0, 0], [125, 0, 0], [149, 0, 0], [158, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_2_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -1334,7 +1334,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_2_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -1346,19 +1346,19 @@
     {
       "op": "null", 
       "name": "mixed_2_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_2_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_2_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1367,7 +1367,7 @@
     {
       "op": "null", 
       "name": "mixed_2_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1376,19 +1376,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_2_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[161, 0, 0], [162, 0, 0], [163, 0, 0], [164, 0, 1], [165, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_2_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[166, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "48", 
@@ -1400,7 +1400,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_2_tower_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "48", 
@@ -1412,19 +1412,19 @@
     {
       "op": "null", 
       "name": "mixed_2_tower_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1433,7 +1433,7 @@
     {
       "op": "null", 
       "name": "mixed_2_tower_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1442,19 +1442,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_2_tower_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[169, 0, 0], [170, 0, 0], [171, 0, 0], [172, 0, 1], [173, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_2_tower_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[174, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(5, 5)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -1466,7 +1466,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_2_tower_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(5, 5)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -1478,19 +1478,19 @@
     {
       "op": "null", 
       "name": "mixed_2_tower_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1499,7 +1499,7 @@
     {
       "op": "null", 
       "name": "mixed_2_tower_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1508,19 +1508,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_2_tower_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[177, 0, 0], [178, 0, 0], [179, 0, 0], [180, 0, 1], [181, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_2_tower_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[182, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -1532,7 +1532,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_2_tower_1_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -1544,19 +1544,19 @@
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1565,7 +1565,7 @@
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1574,19 +1574,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_2_tower_1_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[185, 0, 0], [186, 0, 0], [187, 0, 0], [188, 0, 1], [189, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_2_tower_1_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[190, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -1598,7 +1598,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_2_tower_1_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -1610,19 +1610,19 @@
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1631,7 +1631,7 @@
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1640,19 +1640,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_2_tower_1_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[193, 0, 0], [194, 0, 0], [195, 0, 0], [196, 0, 1], [197, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_2_tower_1_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[198, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_2_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -1664,7 +1664,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_2_tower_1_conv_2_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -1676,19 +1676,19 @@
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_2_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_2_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_2_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1697,7 +1697,7 @@
     {
       "op": "null", 
       "name": "mixed_2_tower_1_conv_2_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1706,19 +1706,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_2_tower_1_conv_2_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[201, 0, 0], [202, 0, 0], [203, 0, 0], [204, 0, 1], [205, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_2_tower_1_conv_2_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[206, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "avg_pool_mixed_2_pool", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "pad": "(1, 1)", 
         "pool_type": "avg", 
@@ -1729,7 +1729,7 @@
     {
       "op": "null", 
       "name": "mixed_2_tower_2_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -1741,7 +1741,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_2_tower_2_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -1753,19 +1753,19 @@
     {
       "op": "null", 
       "name": "mixed_2_tower_2_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_2_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_2_tower_2_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1774,7 +1774,7 @@
     {
       "op": "null", 
       "name": "mixed_2_tower_2_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1783,25 +1783,25 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_2_tower_2_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[210, 0, 0], [211, 0, 0], [212, 0, 0], [213, 0, 1], [214, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_2_tower_2_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[215, 0, 0]]
     }, 
     {
       "op": "Concat", 
       "name": "ch_concat_mixed_2_chconcat", 
-      "attrs": {"num_args": "4"}, 
+      "attr": {"num_args": "4"}, 
       "inputs": [[167, 0, 0], [183, 0, 0], [207, 0, 0], [216, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_3_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -1813,7 +1813,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_3_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -1825,19 +1825,19 @@
     {
       "op": "null", 
       "name": "mixed_3_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_3_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_3_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1846,7 +1846,7 @@
     {
       "op": "null", 
       "name": "mixed_3_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1855,19 +1855,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_3_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[219, 0, 0], [220, 0, 0], [221, 0, 0], [222, 0, 1], [223, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_3_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[224, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -1879,7 +1879,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_3_tower_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "64", 
@@ -1891,19 +1891,19 @@
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1912,7 +1912,7 @@
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1921,19 +1921,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_3_tower_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[227, 0, 0], [228, 0, 0], [229, 0, 0], [230, 0, 1], [231, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_3_tower_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[232, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -1945,7 +1945,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_3_tower_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -1957,19 +1957,19 @@
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1978,7 +1978,7 @@
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -1987,19 +1987,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_3_tower_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[235, 0, 0], [236, 0, 0], [237, 0, 0], [238, 0, 1], [239, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_3_tower_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[240, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_2_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -2011,7 +2011,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_3_tower_conv_2_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "96", 
@@ -2023,19 +2023,19 @@
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_2_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_2_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_2_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2044,7 +2044,7 @@
     {
       "op": "null", 
       "name": "mixed_3_tower_conv_2_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2053,19 +2053,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_3_tower_conv_2_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[243, 0, 0], [244, 0, 0], [245, 0, 0], [246, 0, 1], [247, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_3_tower_conv_2_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[248, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "max_pool_mixed_3_pool", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "pad": "(0, 0)", 
         "pool_type": "max", 
@@ -2076,13 +2076,13 @@
     {
       "op": "Concat", 
       "name": "ch_concat_mixed_3_chconcat", 
-      "attrs": {"num_args": "3"}, 
+      "attr": {"num_args": "3"}, 
       "inputs": [[225, 0, 0], [249, 0, 0], [250, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_4_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -2094,7 +2094,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_4_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -2106,19 +2106,19 @@
     {
       "op": "null", 
       "name": "mixed_4_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2127,7 +2127,7 @@
     {
       "op": "null", 
       "name": "mixed_4_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2136,19 +2136,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_4_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[253, 0, 0], [254, 0, 0], [255, 0, 0], [256, 0, 1], [257, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_4_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[258, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "128", 
@@ -2160,7 +2160,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_4_tower_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "128", 
@@ -2172,19 +2172,19 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2193,7 +2193,7 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2202,19 +2202,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_4_tower_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[261, 0, 0], [262, 0, 0], [263, 0, 0], [264, 0, 1], [265, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_4_tower_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[266, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "128", 
@@ -2226,7 +2226,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_4_tower_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "128", 
@@ -2238,19 +2238,19 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2259,7 +2259,7 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2268,19 +2268,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_4_tower_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[269, 0, 0], [270, 0, 0], [271, 0, 0], [272, 0, 1], [273, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_4_tower_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[274, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_2_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -2292,7 +2292,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_4_tower_conv_2_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -2304,19 +2304,19 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_2_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_2_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_2_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2325,7 +2325,7 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_conv_2_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2334,19 +2334,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_4_tower_conv_2_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[277, 0, 0], [278, 0, 0], [279, 0, 0], [280, 0, 1], [281, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_4_tower_conv_2_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[282, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "128", 
@@ -2358,7 +2358,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_4_tower_1_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "128", 
@@ -2370,19 +2370,19 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2391,7 +2391,7 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2400,19 +2400,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_4_tower_1_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[285, 0, 0], [286, 0, 0], [287, 0, 0], [288, 0, 1], [289, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_4_tower_1_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[290, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "128", 
@@ -2424,7 +2424,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_4_tower_1_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "128", 
@@ -2436,19 +2436,19 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2457,7 +2457,7 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2466,19 +2466,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_4_tower_1_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[293, 0, 0], [294, 0, 0], [295, 0, 0], [296, 0, 1], [297, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_4_tower_1_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[298, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_2_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "128", 
@@ -2490,7 +2490,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_4_tower_1_conv_2_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "128", 
@@ -2502,19 +2502,19 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_2_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_2_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_2_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2523,7 +2523,7 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_2_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2532,19 +2532,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_4_tower_1_conv_2_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[301, 0, 0], [302, 0, 0], [303, 0, 0], [304, 0, 1], [305, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_4_tower_1_conv_2_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[306, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_3_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "128", 
@@ -2556,7 +2556,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_4_tower_1_conv_3_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "128", 
@@ -2568,19 +2568,19 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_3_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_3_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_3_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2589,7 +2589,7 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_3_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2598,19 +2598,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_4_tower_1_conv_3_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[309, 0, 0], [310, 0, 0], [311, 0, 0], [312, 0, 1], [313, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_4_tower_1_conv_3_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[314, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_4_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -2622,7 +2622,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_4_tower_1_conv_4_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -2634,19 +2634,19 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_4_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_4_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_4_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2655,7 +2655,7 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_1_conv_4_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2664,19 +2664,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_4_tower_1_conv_4_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[317, 0, 0], [318, 0, 0], [319, 0, 0], [320, 0, 1], [321, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_4_tower_1_conv_4_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[322, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "avg_pool_mixed_4_pool", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "pad": "(1, 1)", 
         "pool_type": "avg", 
@@ -2687,7 +2687,7 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_2_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -2699,7 +2699,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_4_tower_2_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -2711,19 +2711,19 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_2_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_2_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_4_tower_2_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2732,7 +2732,7 @@
     {
       "op": "null", 
       "name": "mixed_4_tower_2_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2741,25 +2741,25 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_4_tower_2_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[326, 0, 0], [327, 0, 0], [328, 0, 0], [329, 0, 1], [330, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_4_tower_2_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[331, 0, 0]]
     }, 
     {
       "op": "Concat", 
       "name": "ch_concat_mixed_4_chconcat", 
-      "attrs": {"num_args": "4"}, 
+      "attr": {"num_args": "4"}, 
       "inputs": [[259, 0, 0], [283, 0, 0], [323, 0, 0], [332, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_5_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -2771,7 +2771,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_5_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -2783,19 +2783,19 @@
     {
       "op": "null", 
       "name": "mixed_5_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2804,7 +2804,7 @@
     {
       "op": "null", 
       "name": "mixed_5_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2813,19 +2813,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_5_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[335, 0, 0], [336, 0, 0], [337, 0, 0], [338, 0, 1], [339, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_5_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[340, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -2837,7 +2837,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_5_tower_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -2849,19 +2849,19 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2870,7 +2870,7 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2879,19 +2879,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_5_tower_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[343, 0, 0], [344, 0, 0], [345, 0, 0], [346, 0, 1], [347, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_5_tower_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[348, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -2903,7 +2903,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_5_tower_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -2915,19 +2915,19 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2936,7 +2936,7 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -2945,19 +2945,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_5_tower_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[351, 0, 0], [352, 0, 0], [353, 0, 0], [354, 0, 1], [355, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_5_tower_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[356, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_2_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -2969,7 +2969,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_5_tower_conv_2_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -2981,19 +2981,19 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_2_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_2_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_2_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3002,7 +3002,7 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_conv_2_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3011,19 +3011,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_5_tower_conv_2_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[359, 0, 0], [360, 0, 0], [361, 0, 0], [362, 0, 1], [363, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_5_tower_conv_2_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[364, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3035,7 +3035,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_5_tower_1_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3047,19 +3047,19 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3068,7 +3068,7 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3077,19 +3077,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_5_tower_1_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[367, 0, 0], [368, 0, 0], [369, 0, 0], [370, 0, 1], [371, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_5_tower_1_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[372, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3101,7 +3101,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_5_tower_1_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3113,19 +3113,19 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3134,7 +3134,7 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3143,19 +3143,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_5_tower_1_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[375, 0, 0], [376, 0, 0], [377, 0, 0], [378, 0, 1], [379, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_5_tower_1_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[380, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_2_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3167,7 +3167,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_5_tower_1_conv_2_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3179,19 +3179,19 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_2_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_2_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_2_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3200,7 +3200,7 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_2_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3209,19 +3209,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_5_tower_1_conv_2_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[383, 0, 0], [384, 0, 0], [385, 0, 0], [386, 0, 1], [387, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_5_tower_1_conv_2_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[388, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_3_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3233,7 +3233,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_5_tower_1_conv_3_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3245,19 +3245,19 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_3_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_3_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_3_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3266,7 +3266,7 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_3_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3275,19 +3275,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_5_tower_1_conv_3_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[391, 0, 0], [392, 0, 0], [393, 0, 0], [394, 0, 1], [395, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_5_tower_1_conv_3_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[396, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_4_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -3299,7 +3299,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_5_tower_1_conv_4_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -3311,19 +3311,19 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_4_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_4_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_4_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3332,7 +3332,7 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_1_conv_4_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3341,19 +3341,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_5_tower_1_conv_4_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[399, 0, 0], [400, 0, 0], [401, 0, 0], [402, 0, 1], [403, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_5_tower_1_conv_4_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[404, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "avg_pool_mixed_5_pool", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "pad": "(1, 1)", 
         "pool_type": "avg", 
@@ -3364,7 +3364,7 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_2_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -3376,7 +3376,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_5_tower_2_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -3388,19 +3388,19 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_2_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_2_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_5_tower_2_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3409,7 +3409,7 @@
     {
       "op": "null", 
       "name": "mixed_5_tower_2_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3418,25 +3418,25 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_5_tower_2_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[408, 0, 0], [409, 0, 0], [410, 0, 0], [411, 0, 1], [412, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_5_tower_2_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[413, 0, 0]]
     }, 
     {
       "op": "Concat", 
       "name": "ch_concat_mixed_5_chconcat", 
-      "attrs": {"num_args": "4"}, 
+      "attr": {"num_args": "4"}, 
       "inputs": [[341, 0, 0], [365, 0, 0], [405, 0, 0], [414, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_6_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -3448,7 +3448,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_6_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -3460,19 +3460,19 @@
     {
       "op": "null", 
       "name": "mixed_6_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3481,7 +3481,7 @@
     {
       "op": "null", 
       "name": "mixed_6_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3490,19 +3490,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_6_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[417, 0, 0], [418, 0, 0], [419, 0, 0], [420, 0, 1], [421, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_6_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[422, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3514,7 +3514,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_6_tower_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3526,19 +3526,19 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3547,7 +3547,7 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3556,19 +3556,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_6_tower_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[425, 0, 0], [426, 0, 0], [427, 0, 0], [428, 0, 1], [429, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_6_tower_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[430, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3580,7 +3580,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_6_tower_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3592,19 +3592,19 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3613,7 +3613,7 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3622,19 +3622,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_6_tower_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[433, 0, 0], [434, 0, 0], [435, 0, 0], [436, 0, 1], [437, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_6_tower_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[438, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_2_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -3646,7 +3646,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_6_tower_conv_2_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -3658,19 +3658,19 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_2_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_2_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_2_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3679,7 +3679,7 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_conv_2_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3688,19 +3688,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_6_tower_conv_2_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[441, 0, 0], [442, 0, 0], [443, 0, 0], [444, 0, 1], [445, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_6_tower_conv_2_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[446, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3712,7 +3712,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_6_tower_1_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3724,19 +3724,19 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3745,7 +3745,7 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3754,19 +3754,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_6_tower_1_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[449, 0, 0], [450, 0, 0], [451, 0, 0], [452, 0, 1], [453, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_6_tower_1_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[454, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3778,7 +3778,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_6_tower_1_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3790,19 +3790,19 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3811,7 +3811,7 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3820,19 +3820,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_6_tower_1_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[457, 0, 0], [458, 0, 0], [459, 0, 0], [460, 0, 1], [461, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_6_tower_1_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[462, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_2_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3844,7 +3844,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_6_tower_1_conv_2_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3856,19 +3856,19 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_2_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_2_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_2_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3877,7 +3877,7 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_2_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3886,19 +3886,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_6_tower_1_conv_2_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[465, 0, 0], [466, 0, 0], [467, 0, 0], [468, 0, 1], [469, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_6_tower_1_conv_2_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[470, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_3_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3910,7 +3910,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_6_tower_1_conv_3_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "160", 
@@ -3922,19 +3922,19 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_3_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_3_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_3_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3943,7 +3943,7 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_3_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -3952,19 +3952,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_6_tower_1_conv_3_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[473, 0, 0], [474, 0, 0], [475, 0, 0], [476, 0, 1], [477, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_6_tower_1_conv_3_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[478, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_4_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -3976,7 +3976,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_6_tower_1_conv_4_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -3988,19 +3988,19 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_4_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_4_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_4_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4009,7 +4009,7 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_1_conv_4_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4018,19 +4018,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_6_tower_1_conv_4_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[481, 0, 0], [482, 0, 0], [483, 0, 0], [484, 0, 1], [485, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_6_tower_1_conv_4_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[486, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "avg_pool_mixed_6_pool", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "pad": "(1, 1)", 
         "pool_type": "avg", 
@@ -4041,7 +4041,7 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_2_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4053,7 +4053,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_6_tower_2_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4065,19 +4065,19 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_2_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_2_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_6_tower_2_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4086,7 +4086,7 @@
     {
       "op": "null", 
       "name": "mixed_6_tower_2_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4095,25 +4095,25 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_6_tower_2_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[490, 0, 0], [491, 0, 0], [492, 0, 0], [493, 0, 1], [494, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_6_tower_2_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[495, 0, 0]]
     }, 
     {
       "op": "Concat", 
       "name": "ch_concat_mixed_6_chconcat", 
-      "attrs": {"num_args": "4"}, 
+      "attr": {"num_args": "4"}, 
       "inputs": [[423, 0, 0], [447, 0, 0], [487, 0, 0], [496, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_7_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4125,7 +4125,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_7_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4137,19 +4137,19 @@
     {
       "op": "null", 
       "name": "mixed_7_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4158,7 +4158,7 @@
     {
       "op": "null", 
       "name": "mixed_7_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4167,19 +4167,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_7_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[499, 0, 0], [500, 0, 0], [501, 0, 0], [502, 0, 1], [503, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_7_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[504, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4191,7 +4191,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_7_tower_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4203,19 +4203,19 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4224,7 +4224,7 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4233,19 +4233,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_7_tower_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[507, 0, 0], [508, 0, 0], [509, 0, 0], [510, 0, 1], [511, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_7_tower_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[512, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4257,7 +4257,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_7_tower_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4269,19 +4269,19 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4290,7 +4290,7 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4299,19 +4299,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_7_tower_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[515, 0, 0], [516, 0, 0], [517, 0, 0], [518, 0, 1], [519, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_7_tower_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[520, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_2_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4323,7 +4323,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_7_tower_conv_2_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4335,19 +4335,19 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_2_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_2_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_2_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4356,7 +4356,7 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_conv_2_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4365,19 +4365,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_7_tower_conv_2_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[523, 0, 0], [524, 0, 0], [525, 0, 0], [526, 0, 1], [527, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_7_tower_conv_2_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[528, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4389,7 +4389,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_7_tower_1_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4401,19 +4401,19 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4422,7 +4422,7 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4431,19 +4431,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_7_tower_1_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[531, 0, 0], [532, 0, 0], [533, 0, 0], [534, 0, 1], [535, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_7_tower_1_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[536, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4455,7 +4455,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_7_tower_1_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4467,19 +4467,19 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4488,7 +4488,7 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4497,19 +4497,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_7_tower_1_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[539, 0, 0], [540, 0, 0], [541, 0, 0], [542, 0, 1], [543, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_7_tower_1_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[544, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_2_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4521,7 +4521,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_7_tower_1_conv_2_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4533,19 +4533,19 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_2_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_2_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_2_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4554,7 +4554,7 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_2_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4563,19 +4563,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_7_tower_1_conv_2_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[547, 0, 0], [548, 0, 0], [549, 0, 0], [550, 0, 1], [551, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_7_tower_1_conv_2_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[552, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_3_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4587,7 +4587,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_7_tower_1_conv_3_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4599,19 +4599,19 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_3_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_3_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_3_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4620,7 +4620,7 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_3_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4629,19 +4629,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_7_tower_1_conv_3_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[555, 0, 0], [556, 0, 0], [557, 0, 0], [558, 0, 1], [559, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_7_tower_1_conv_3_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[560, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_4_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4653,7 +4653,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_7_tower_1_conv_4_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4665,19 +4665,19 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_4_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_4_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_4_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4686,7 +4686,7 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_1_conv_4_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4695,19 +4695,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_7_tower_1_conv_4_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[563, 0, 0], [564, 0, 0], [565, 0, 0], [566, 0, 1], [567, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_7_tower_1_conv_4_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[568, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "avg_pool_mixed_7_pool", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "pad": "(1, 1)", 
         "pool_type": "avg", 
@@ -4718,7 +4718,7 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_2_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4730,7 +4730,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_7_tower_2_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4742,19 +4742,19 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_2_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_2_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_7_tower_2_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4763,7 +4763,7 @@
     {
       "op": "null", 
       "name": "mixed_7_tower_2_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4772,25 +4772,25 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_7_tower_2_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[572, 0, 0], [573, 0, 0], [574, 0, 0], [575, 0, 1], [576, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_7_tower_2_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[577, 0, 0]]
     }, 
     {
       "op": "Concat", 
       "name": "ch_concat_mixed_7_chconcat", 
-      "attrs": {"num_args": "4"}, 
+      "attr": {"num_args": "4"}, 
       "inputs": [[505, 0, 0], [529, 0, 0], [569, 0, 0], [578, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4802,7 +4802,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_8_tower_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4814,19 +4814,19 @@
     {
       "op": "null", 
       "name": "mixed_8_tower_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4835,7 +4835,7 @@
     {
       "op": "null", 
       "name": "mixed_8_tower_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4844,19 +4844,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_8_tower_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[581, 0, 0], [582, 0, 0], [583, 0, 0], [584, 0, 1], [585, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_8_tower_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[586, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "320", 
@@ -4868,7 +4868,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_8_tower_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "320", 
@@ -4880,19 +4880,19 @@
     {
       "op": "null", 
       "name": "mixed_8_tower_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4901,7 +4901,7 @@
     {
       "op": "null", 
       "name": "mixed_8_tower_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4910,19 +4910,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_8_tower_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[589, 0, 0], [590, 0, 0], [591, 0, 0], [592, 0, 1], [593, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_8_tower_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[594, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4934,7 +4934,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_8_tower_1_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -4946,19 +4946,19 @@
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4967,7 +4967,7 @@
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -4976,19 +4976,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_8_tower_1_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[597, 0, 0], [598, 0, 0], [599, 0, 0], [600, 0, 1], [601, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_8_tower_1_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[602, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -5000,7 +5000,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_8_tower_1_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 7)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -5012,19 +5012,19 @@
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5033,7 +5033,7 @@
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5042,19 +5042,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_8_tower_1_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[605, 0, 0], [606, 0, 0], [607, 0, 0], [608, 0, 1], [609, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_8_tower_1_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[610, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_2_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -5066,7 +5066,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_8_tower_1_conv_2_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(7, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -5078,19 +5078,19 @@
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_2_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_2_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_2_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5099,7 +5099,7 @@
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_2_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5108,19 +5108,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_8_tower_1_conv_2_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[613, 0, 0], [614, 0, 0], [615, 0, 0], [616, 0, 1], [617, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_8_tower_1_conv_2_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[618, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_3_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -5132,7 +5132,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_8_tower_1_conv_3_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -5144,19 +5144,19 @@
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_3_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_3_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_3_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5165,7 +5165,7 @@
     {
       "op": "null", 
       "name": "mixed_8_tower_1_conv_3_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5174,19 +5174,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_8_tower_1_conv_3_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[621, 0, 0], [622, 0, 0], [623, 0, 0], [624, 0, 1], [625, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_8_tower_1_conv_3_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[626, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "max_pool_mixed_8_pool", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "pool_type": "max", 
         "stride": "(2, 2)"
@@ -5196,13 +5196,13 @@
     {
       "op": "Concat", 
       "name": "ch_concat_mixed_8_chconcat", 
-      "attrs": {"num_args": "3"}, 
+      "attr": {"num_args": "3"}, 
       "inputs": [[595, 0, 0], [627, 0, 0], [628, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_9_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "320", 
@@ -5214,7 +5214,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_9_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "320", 
@@ -5226,19 +5226,19 @@
     {
       "op": "null", 
       "name": "mixed_9_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5247,7 +5247,7 @@
     {
       "op": "null", 
       "name": "mixed_9_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5256,19 +5256,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_9_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[631, 0, 0], [632, 0, 0], [633, 0, 0], [634, 0, 1], [635, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_9_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[636, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5280,7 +5280,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_9_tower_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5292,19 +5292,19 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5313,7 +5313,7 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5322,19 +5322,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_9_tower_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[639, 0, 0], [640, 0, 0], [641, 0, 0], [642, 0, 1], [643, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_9_tower_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[644, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_mixed_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 3)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5346,7 +5346,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_9_tower_mixed_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 3)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5358,19 +5358,19 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_mixed_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_mixed_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_mixed_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5379,7 +5379,7 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_mixed_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5388,19 +5388,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_9_tower_mixed_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[647, 0, 0], [648, 0, 0], [649, 0, 0], [650, 0, 1], [651, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_9_tower_mixed_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[652, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_mixed_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 1)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5412,7 +5412,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_9_tower_mixed_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 1)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5424,19 +5424,19 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_mixed_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_mixed_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_mixed_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5445,7 +5445,7 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_mixed_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5454,19 +5454,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_9_tower_mixed_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[655, 0, 0], [656, 0, 0], [657, 0, 0], [658, 0, 1], [659, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_9_tower_mixed_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[660, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_1_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "448", 
@@ -5478,7 +5478,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_9_tower_1_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "448", 
@@ -5490,19 +5490,19 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_1_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_1_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_1_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5511,7 +5511,7 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_1_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5520,19 +5520,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_9_tower_1_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[663, 0, 0], [664, 0, 0], [665, 0, 0], [666, 0, 1], [667, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_9_tower_1_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[668, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_1_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5544,7 +5544,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_9_tower_1_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5556,19 +5556,19 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_1_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_1_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_1_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5577,7 +5577,7 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_1_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5586,19 +5586,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_9_tower_1_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[671, 0, 0], [672, 0, 0], [673, 0, 0], [674, 0, 1], [675, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_9_tower_1_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[676, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_1_mixed_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 3)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5610,7 +5610,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_9_tower_1_mixed_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 3)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5622,19 +5622,19 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_1_mixed_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_1_mixed_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_1_mixed_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5643,7 +5643,7 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_1_mixed_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5652,19 +5652,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_9_tower_1_mixed_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[679, 0, 0], [680, 0, 0], [681, 0, 0], [682, 0, 1], [683, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_9_tower_1_mixed_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[684, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_1_mixed_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 1)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5676,7 +5676,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_9_tower_1_mixed_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 1)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5688,19 +5688,19 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_1_mixed_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_1_mixed_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_1_mixed_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5709,7 +5709,7 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_1_mixed_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5718,19 +5718,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_9_tower_1_mixed_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[687, 0, 0], [688, 0, 0], [689, 0, 0], [690, 0, 1], [691, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_9_tower_1_mixed_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[692, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "avg_pool_mixed_9_pool", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "pad": "(1, 1)", 
         "pool_type": "avg", 
@@ -5741,7 +5741,7 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_2_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -5753,7 +5753,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_9_tower_2_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -5765,19 +5765,19 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_2_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_2_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_9_tower_2_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5786,7 +5786,7 @@
     {
       "op": "null", 
       "name": "mixed_9_tower_2_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5795,25 +5795,25 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_9_tower_2_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[696, 0, 0], [697, 0, 0], [698, 0, 0], [699, 0, 1], [700, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_9_tower_2_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[701, 0, 0]]
     }, 
     {
       "op": "Concat", 
       "name": "ch_concat_mixed_9_chconcat", 
-      "attrs": {"num_args": "6"}, 
+      "attr": {"num_args": "6"}, 
       "inputs": [[637, 0, 0], [653, 0, 0], [661, 0, 0], [685, 0, 0], [693, 0, 0], [702, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_10_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "320", 
@@ -5825,7 +5825,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_10_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "320", 
@@ -5837,19 +5837,19 @@
     {
       "op": "null", 
       "name": "mixed_10_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5858,7 +5858,7 @@
     {
       "op": "null", 
       "name": "mixed_10_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5867,19 +5867,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_10_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[705, 0, 0], [706, 0, 0], [707, 0, 0], [708, 0, 1], [709, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_10_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[710, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5891,7 +5891,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_10_tower_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5903,19 +5903,19 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5924,7 +5924,7 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5933,19 +5933,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_10_tower_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[713, 0, 0], [714, 0, 0], [715, 0, 0], [716, 0, 1], [717, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_10_tower_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[718, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_mixed_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 3)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5957,7 +5957,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_10_tower_mixed_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 3)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -5969,19 +5969,19 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_mixed_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_mixed_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_mixed_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5990,7 +5990,7 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_mixed_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -5999,19 +5999,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_10_tower_mixed_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[721, 0, 0], [722, 0, 0], [723, 0, 0], [724, 0, 1], [725, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_10_tower_mixed_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[726, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_mixed_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 1)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -6023,7 +6023,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_10_tower_mixed_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 1)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -6035,19 +6035,19 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_mixed_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_mixed_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_mixed_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -6056,7 +6056,7 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_mixed_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -6065,19 +6065,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_10_tower_mixed_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[729, 0, 0], [730, 0, 0], [731, 0, 0], [732, 0, 1], [733, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_10_tower_mixed_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[734, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_1_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "448", 
@@ -6089,7 +6089,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_10_tower_1_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "448", 
@@ -6101,19 +6101,19 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_1_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_1_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_1_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -6122,7 +6122,7 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_1_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -6131,19 +6131,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_10_tower_1_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[737, 0, 0], [738, 0, 0], [739, 0, 0], [740, 0, 1], [741, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_10_tower_1_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[742, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_1_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -6155,7 +6155,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_10_tower_1_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -6167,19 +6167,19 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_1_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_1_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_1_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -6188,7 +6188,7 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_1_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -6197,19 +6197,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_10_tower_1_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[745, 0, 0], [746, 0, 0], [747, 0, 0], [748, 0, 1], [749, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_10_tower_1_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[750, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_1_mixed_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 3)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -6221,7 +6221,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_10_tower_1_mixed_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 3)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -6233,19 +6233,19 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_1_mixed_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_1_mixed_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_1_mixed_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -6254,7 +6254,7 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_1_mixed_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -6263,19 +6263,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_10_tower_1_mixed_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[753, 0, 0], [754, 0, 0], [755, 0, 0], [756, 0, 1], [757, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_10_tower_1_mixed_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[758, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_1_mixed_conv_1_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 1)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -6287,7 +6287,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_10_tower_1_mixed_conv_1_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 1)", 
         "no_bias": "True", 
         "num_filter": "384", 
@@ -6299,19 +6299,19 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_1_mixed_conv_1_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_1_mixed_conv_1_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_1_mixed_conv_1_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -6320,7 +6320,7 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_1_mixed_conv_1_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -6329,19 +6329,19 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_10_tower_1_mixed_conv_1_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[761, 0, 0], [762, 0, 0], [763, 0, 0], [764, 0, 1], [765, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_10_tower_1_mixed_conv_1_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[766, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "max_pool_mixed_10_pool", 
-      "attrs": {
+      "attr": {
         "kernel": "(3, 3)", 
         "pad": "(1, 1)", 
         "pool_type": "max", 
@@ -6352,7 +6352,7 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_2_conv_conv2d_weight", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -6364,7 +6364,7 @@
     {
       "op": "Convolution", 
       "name": "mixed_10_tower_2_conv_conv2d", 
-      "attrs": {
+      "attr": {
         "kernel": "(1, 1)", 
         "no_bias": "True", 
         "num_filter": "192", 
@@ -6376,19 +6376,19 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_2_conv_batchnorm_gamma", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_2_conv_batchnorm_beta", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "mixed_10_tower_2_conv_batchnorm_moving_mean", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"zero\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -6397,7 +6397,7 @@
     {
       "op": "null", 
       "name": "mixed_10_tower_2_conv_batchnorm_moving_var", 
-      "attrs": {
+      "attr": {
         "__init__": "[\"one\", {}]", 
         "fix_gamma": "True"
       }, 
@@ -6406,25 +6406,25 @@
     {
       "op": "BatchNorm", 
       "name": "mixed_10_tower_2_conv_batchnorm", 
-      "attrs": {"fix_gamma": "True"}, 
+      "attr": {"fix_gamma": "True"}, 
       "inputs": [[770, 0, 0], [771, 0, 0], [772, 0, 0], [773, 0, 1], [774, 0, 1]]
     }, 
     {
       "op": "Activation", 
       "name": "mixed_10_tower_2_conv_relu", 
-      "attrs": {"act_type": "relu"}, 
+      "attr": {"act_type": "relu"}, 
       "inputs": [[775, 0, 0]]
     }, 
     {
       "op": "Concat", 
       "name": "ch_concat_mixed_10_chconcat", 
-      "attrs": {"num_args": "6"}, 
+      "attr": {"num_args": "6"}, 
       "inputs": [[711, 0, 0], [727, 0, 0], [735, 0, 0], [759, 0, 0], [767, 0, 0], [776, 0, 0]]
     }, 
     {
       "op": "Pooling", 
       "name": "global_pool", 
-      "attrs": {
+      "attr": {
         "kernel": "(8, 8)", 
         "pool_type": "avg", 
         "stride": "(1, 1)"
@@ -6439,25 +6439,25 @@
     {
       "op": "null", 
       "name": "fc1_weight", 
-      "attrs": {"num_hidden": "1000"}, 
+      "attr": {"num_hidden": "1000"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "fc1_bias", 
-      "attrs": {"num_hidden": "1000"}, 
+      "attr": {"num_hidden": "1000"}, 
       "inputs": []
     }, 
     {
       "op": "FullyConnected", 
       "name": "fc1", 
-      "attrs": {"num_hidden": "1000"}, 
+      "attr": {"num_hidden": "1000"}, 
       "inputs": [[779, 0, 0], [780, 0, 0], [781, 0, 0]]
     }, 
     {
       "op": "Cast", 
-      "name": "cast9", 
-      "attrs": {"dtype": "float32"}, 
+      "name": "cast5", 
+      "attr": {"dtype": "float32"}, 
       "inputs": [[782, 0, 0]]
     }, 
     {
@@ -7737,5 +7737,5 @@
     974
   ], 
   "heads": [[785, 0, 0]], 
-  "attrs": {"mxnet_version": ["int", 10200]}
+  "attrs": {"mxnet_version": ["int", 1000]}
 }
