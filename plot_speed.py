@@ -10,7 +10,11 @@ import numpy as np
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='plot the speed benchmark results')
     parser.add_argument('--network', type=str, default='resnet50', help='network name')
-    parser.add_argument('--res-dir', type=str, default='cache/results', help='network name')
+    parser.add_argument('--res-dir', type=str, default='cache/results',
+                        help='result file dir')
+    parser.add_argument('--dtype', type=str, default='float32',
+                        choices=['float32', 'float16'],
+                        help='data type')
     args = parser.parse_args()
 
     results = {}
@@ -20,12 +24,30 @@ if __name__ == '__main__':
         sys.exit(1)
     for fpath in file_list:
         fname = os.path.split(fpath)[-1]
-        dllib, network, dtype, batch_size = os.path.splitext(fname)[0].split('_')
+        t = os.path.splitext(fname)[0].split('_')
+        if len(t) == 4:
+            dllib, network, dtype, batch_size = t
+        elif len(t) == 3:
+            dllib, network, batch_size = t
+            dtype = 'float32'
+        else:
+            raise ValueError('Unknown file')
         speed = -1
         gpu_mem = -1
         batch_size = int(batch_size)
         with open(fpath, 'r') as fd:
-            _dllib, _network, _dtype, _batch_size, speed, gpu_mem = fd.readline().strip().split()
+            t = fd.readline().strip().split()
+            if len(t) == 6:
+                _dllib, _network, _dtype, _batch_size, speed, gpu_mem = t
+            elif len(t) == 5:
+                _dllib, _network, _batch_size, speed, gpu_mem = t
+                _dtype = 'float32'
+            else:
+                raise ValueError('Unknown result content: %s' % ' '.join(t))
+
+            if _dtype != args.dtype:
+                continue
+
             assert(_dllib==dllib)
             assert(_network==network)
             assert(_network==args.network)
@@ -71,6 +93,8 @@ if __name__ == '__main__':
                 xticks = results[name]['batch_size']
         plt.legend(loc=4)
         plt.xticks(xticks)
-        res_path = os.path.join(args.res_dir, '%s_%s.png' % (args.network, target.lower().replace(' ', '_')))
+        res_path = os.path.join(args.res_dir, '%s_%s_%s.png' % (args.network,
+                                                                args.dtype,
+                                                                target.lower().replace(' ', '_')))
         print('Save %s benchmark results to: %s' % (target.lower(), res_path))
         plt.savefig(res_path)

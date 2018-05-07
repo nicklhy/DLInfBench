@@ -13,33 +13,33 @@
 * Tensorflow version: 1.2.0-rc0
 
 ## AlexNet
-![Speed Benchmark](results/gtx_1080/alexnet_speed.png)
-![GPU Memory Benchmark](results/gtx_1080/alexnet_gpu_memory.png)
+![Speed Benchmark](results/gtx_1080/alexnet_float32_speed.png)
+![GPU Memory Benchmark](results/gtx_1080/alexnet_float32_gpu_memory.png)
 
 ## VGG16
-![Speed Benchmark](results/gtx_1080/vgg16_speed.png)
-![GPU Memory Benchmark](results/gtx_1080/vgg16_gpu_memory.png)
+![Speed Benchmark](results/gtx_1080/vgg16_float32_speed.png)
+![GPU Memory Benchmark](results/gtx_1080/vgg16_float32_gpu_memory.png)
 
 ## VGG19
-![Speed Benchmark](results/gtx_1080/vgg19_speed.png)
-![GPU Memory Benchmark](results/gtx_1080/vgg19_gpu_memory.png)
+![Speed Benchmark](results/gtx_1080/vgg19_float32_speed.png)
+![GPU Memory Benchmark](results/gtx_1080/vgg19_float32_gpu_memory.png)
 
 ## Inception-BN
-![Speed Benchmark](results/gtx_1080/inception-bn_speed.png)
-![GPU Memory Benchmark](results/gtx_1080/inception-bn_gpu_memory.png)
+![Speed Benchmark](results/gtx_1080/inception-bn_float32_speed.png)
+![GPU Memory Benchmark](results/gtx_1080/inception-bn_float32_gpu_memory.png)
 
 ## Inception-V3
-![Speed Benchmark](results/gtx_1080/inception-v3_speed.png)
-![GPU Memory Benchmark](results/gtx_1080/inception-v3_gpu_memory.png)
+![Speed Benchmark](results/gtx_1080/inception-v3_float32_speed.png)
+![GPU Memory Benchmark](results/gtx_1080/inception-v3_float32_gpu_memory.png)
 
 ## ResNet50
-![Speed Benchmark](results/gtx_1080/resnet50_speed.png)
-![GPU Memory Benchmark](results/gtx_1080/resnet50_gpu_memory.png)
+![Speed Benchmark](results/gtx_1080/resnet50_float32_speed.png)
+![GPU Memory Benchmark](results/gtx_1080/resnet50_float32_gpu_memory.png)
 
 ## ResNet101
-![Speed Benchmark](results/gtx_1080/resnet101_speed.png)
-![GPU Memory Benchmark](results/gtx_1080/resnet101_gpu_memory.png)
+![Speed Benchmark](results/gtx_1080/resnet101_float32_speed.png)
+![GPU Memory Benchmark](results/gtx_1080/resnet101_float32_gpu_memory.png)
 
 ## ResNet152
-![Speed Benchmark](results/gtx_1080/resnet152_speed.png)
-![GPU Memory Benchmark](results/gtx_1080/resnet152_gpu_memory.png)
+![Speed Benchmark](results/gtx_1080/resnet152_float32_speed.png)
+![GPU Memory Benchmark](results/gtx_1080/resnet152_float32_gpu_memory.png)

@@ -13,34 +13,34 @@
 * Tensorflow version: 1.2.0-rc0
 
 ## AlexNet
-![Speed Benchmark](results/titan_x_pascal/alexnet_speed.png)
-![GPU Memory Benchmark](results/titan_x_pascal/alexnet_gpu_memory.png)
+![Speed Benchmark](results/titan_x_pascal/alexnet_float32_speed.png)
+![GPU Memory Benchmark](results/titan_x_pascal/alexnet_float32_gpu_memory.png)
 
 ## VGG16
-![Speed Benchmark](results/titan_x_pascal/vgg16_speed.png)
-![GPU Memory Benchmark](results/titan_x_pascal/vgg16_gpu_memory.png)
+![Speed Benchmark](results/titan_x_pascal/vgg16_float32_speed.png)
+![GPU Memory Benchmark](results/titan_x_pascal/vgg16_float32_gpu_memory.png)
 
 ## VGG19
-![Speed Benchmark](results/titan_x_pascal/vgg19_speed.png)
-![GPU Memory Benchmark](results/titan_x_pascal/vgg19_gpu_memory.png)
+![Speed Benchmark](results/titan_x_pascal/vgg19_float32_speed.png)
+![GPU Memory Benchmark](results/titan_x_pascal/vgg19_float32_gpu_memory.png)
 
 ## Inception-BN
-![Speed Benchmark](results/titan_x_pascal/inception-bn_speed.png)
-![GPU Memory Benchmark](results/titan_x_pascal/inception-bn_gpu_memory.png)
+![Speed Benchmark](results/titan_x_pascal/inception-bn_float32_speed.png)
+![GPU Memory Benchmark](results/titan_x_pascal/inception-bn_float32_gpu_memory.png)
 
 ## Inception-V3
-![Speed Benchmark](results/titan_x_pascal/inception-v3_speed.png)
-![GPU Memory Benchmark](results/titan_x_pascal/inception-v3_gpu_memory.png)
+![Speed Benchmark](results/titan_x_pascal/inception-v3_float32_speed.png)
+![GPU Memory Benchmark](results/titan_x_pascal/inception-v3_float32_gpu_memory.png)
 
 ## ResNet50
-![Speed Benchmark](results/titan_x_pascal/resnet50_speed.png)
-![GPU Memory Benchmark](results/titan_x_pascal/resnet50_gpu_memory.png)
+![Speed Benchmark](results/titan_x_pascal/resnet50_float32_speed.png)
+![GPU Memory Benchmark](results/titan_x_pascal/resnet50_float32_gpu_memory.png)
 
 ## ResNet101
-![Speed Benchmark](results/titan_x_pascal/resnet101_speed.png)
-![GPU Memory Benchmark](results/titan_x_pascal/resnet101_gpu_memory.png)
+![Speed Benchmark](results/titan_x_pascal/resnet101_float32_speed.png)
+![GPU Memory Benchmark](results/titan_x_pascal/resnet101_float32_gpu_memory.png)
 
 ## ResNet152
-![Speed Benchmark](results/titan_x_pascal/resnet152_speed.png)
-![GPU Memory Benchmark](results/titan_x_pascal/resnet152_gpu_memory.png)
+![Speed Benchmark](results/titan_x_pascal/resnet152_float32_speed.png)
+![GPU Memory Benchmark](results/titan_x_pascal/resnet152_float32_gpu_memory.png)
 
