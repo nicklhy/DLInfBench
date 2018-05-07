@@ -125,5 +125,5 @@ if __name__ == '__main__':
                                                                args.dtype,
                                                                args.batch_size))
     with open(res_file_path, 'w') as fd:
-        fd.write('%s %s %s %d %f %d' % (DLLIB, args.network, args.dtype,
+        fd.write('%s %s %s %d %f %d\n' % (DLLIB, args.network, args.dtype,
                                      args.batch_size, args.n_sample/t_avg, gpu_mem))
