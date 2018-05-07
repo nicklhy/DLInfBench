@@ -31,10 +31,14 @@ if __name__ == '__main__':
 
     if not args.cudnn:
         torch.backends.cudnn.enabled=False
+        print('Disable cudnn!')
 
     gpus = [int(i) for i in args.gpu.split(',')]
 
-    print('===================== benchmark for %s %s =====================' % (DLLIB, args.network))
+    if args.dtype != 'float32':
+        raise ValueError('Only float32 models are supported yet!')
+
+    print('===================== benchmark for %s %s %s =====================' % (DLLIB, args.network, args.dtype))
     print('n_sample=%d, batch size=%d, num epoch=%d' %  (args.n_sample, args.batch_size, args.n_epoch))
 
     im_size = 224
@@ -58,9 +62,9 @@ if __name__ == '__main__':
         print('Initialize randomly')
 
     if len(gpus) == 1:
-        net.cuda(device_id=gpus[0])
+        net.cuda(device=gpus[0])
     else:
-        net = torch.nn.DataParallel(net, device_ids=gpus).cuda(device_id=gpus[0])
+        net = torch.nn.DataParallel(net, device_ids=gpus).cuda(device=gpus[0])
     net.eval()
     t2 = time.time()
     print('Finish loading model in %.4fs' % (t2-t1))
@@ -79,7 +83,7 @@ if __name__ == '__main__':
     for i, (batch_input, batch_target) in enumerate(data_loader):
         if i >= 10:
             break
-        batch_input_var = torch.autograd.Variable(batch_input, volatile=True).cuda(device_id=gpus[0])
+        batch_input_var = torch.autograd.Variable(batch_input).cuda(device=gpus[0])
         output = net(batch_input_var)
     print('Warm-up for 10 iterations')
 
@@ -89,7 +93,7 @@ if __name__ == '__main__':
         t1 = time.time()
 
         for batch_id, (batch_input, batch_target) in enumerate(data_loader):
-            batch_input_var = torch.autograd.Variable(batch_input, volatile=True).cuda(device_id=gpus[0])
+            batch_input_var = torch.autograd.Variable(batch_input).cuda(device=gpus[0])
             output = net(batch_input_var)
 
         t2 = time.time()
