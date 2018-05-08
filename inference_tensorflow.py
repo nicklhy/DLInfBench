@@ -38,7 +38,7 @@ if __name__ == '__main__':
 
     network_fn = nets_factory.get_network_fn(args.network, num_classes=1000, weight_decay=0.00004, is_training=False)
 
-    print('===================== benchmark for %s %s =====================' % (DLLIB, args.network))
+    print('===================== benchmark for %s %s %s =====================' % (DLLIB, args.network, args.dtype))
     print('n_sample=%d, batch size=%d, num epoch=%d' %  (args.n_sample, args.batch_size, args.n_epoch))
 
     im_size = 224

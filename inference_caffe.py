@@ -29,7 +29,7 @@ if __name__ == '__main__':
                         help='verbose information')
     args = parser.parse_args()
 
-    print('===================== benchmark for %s %s =====================' % (DLLIB, args.network))
+    print('===================== benchmark for %s %s %s =====================' % (DLLIB, args.network, args.dtype))
     print('n_sample=%d, batch size=%d, num epoch=%d' %  (args.n_sample, args.batch_size, args.n_epoch))
 
     caffe.set_device(args.gpu)
