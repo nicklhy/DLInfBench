@@ -23,7 +23,7 @@ I may add benchmark code for more networks (i.e. inception-bn, inception-v3) and
 1. There is a problem when I try to run alexnet with CUDNN in caffe2(check the code [here](https://github.com/nicklhy/DLInfBench/blob/master/inference_caffe2.py#L214)). Thus, CUDNN is turned off temporally in caffe2's alexnet benchmarks. If you know how to fix this bug, a PR is welcomed.
 
 ## Results
-1. Titan X (Pascal): [RESULT_TitanX.md](RESULT_TitanX.md).
+1. Titan X (Pascal): [RESULT_TitanXP.md](RESULT_TitanXP.md).
 2. GeForce GTX 1080: [RESULT_GTX1080.md](RESULT_GTX1080.md).
 3. GeForce GTX 1080 Ti: [RESULT_GTX1080Ti.md](RESULT_GTX1080Ti.md).
 4. Tesla V100: [RESULT_TeslaV100.md](RESULT_TeslaV100.md).
