@@ -12,9 +12,6 @@ if __name__ == '__main__':
     parser.add_argument('--network', type=str, default='resnet50', help='network name')
     parser.add_argument('--res-dir', type=str, default='cache/results',
                         help='result file dir')
-    parser.add_argument('--dtype', type=str, default='float32',
-                        choices=['float32', 'float16'],
-                        help='data type')
     args = parser.parse_args()
 
     results = {}
@@ -44,9 +41,6 @@ if __name__ == '__main__':
                 _dtype = 'float32'
             else:
                 raise ValueError('Unknown result content: %s' % ' '.join(t))
-
-            if _dtype != args.dtype:
-                continue
 
             assert(_dllib==dllib)
             assert(_network==network)
@@ -93,8 +87,7 @@ if __name__ == '__main__':
                 xticks = results[name]['batch_size']
         plt.legend(loc=4)
         plt.xticks(xticks)
-        res_path = os.path.join(args.res_dir, '%s_%s_%s.png' % (args.network,
-                                                                args.dtype,
+        res_path = os.path.join(args.res_dir, '%s_%s.png' % (args.network,
                                                                 target.lower().replace(' ', '_')))
         print('Save %s benchmark results to: %s' % (target.lower(), res_path))
         plt.savefig(res_path)

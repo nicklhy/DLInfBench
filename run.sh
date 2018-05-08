@@ -29,5 +29,5 @@ done
 
 for NETWORK in ${NETWORK_LIST}
 do
-    ${PYTHON} plot_speed.py --network ${NETWORK} --dtype ${DTYPE}
+    ${PYTHON} plot_speed.py --network ${NETWORK}
 done
