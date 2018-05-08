@@ -1,0 +1,1 @@
+caffe inception-bn float32 32 497.587199 4518

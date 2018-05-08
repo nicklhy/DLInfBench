@@ -1,0 +1,1 @@
+caffe resnet101 float32 1 28.211943 2026

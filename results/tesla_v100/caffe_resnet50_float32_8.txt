@@ -1,0 +1,1 @@
+caffe resnet50 float32 8 274.701701 2880

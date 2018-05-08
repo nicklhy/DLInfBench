@@ -1,0 +1,1 @@
+mxnet resnet50 float16 1 233.938188 896

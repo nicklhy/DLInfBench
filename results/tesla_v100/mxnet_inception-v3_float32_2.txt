@@ -1,0 +1,1 @@
+mxnet inception-v3 float32 2 142.969324 986

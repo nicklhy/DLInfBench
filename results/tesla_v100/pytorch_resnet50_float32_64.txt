@@ -1,0 +1,1 @@
+pytorch resnet50 float32 64 686.250087 12730

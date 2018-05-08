@@ -1,0 +1,1 @@
+mxnet alexnet float32 128 4418.643502 1774

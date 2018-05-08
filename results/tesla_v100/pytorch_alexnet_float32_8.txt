@@ -1,0 +1,1 @@
+pytorch alexnet float32 8 1442.753533 1556

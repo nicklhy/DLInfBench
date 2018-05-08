@@ -1,0 +1,1 @@
+mxnet resnet50 float32 32 913.658803 1384
