@@ -1,1 +1,1 @@
-mxnet vgg16 float32 4 185.324609 2066
+mxnet vgg16 float32 4 185.773894 2066

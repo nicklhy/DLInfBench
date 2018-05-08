@@ -1,1 +1,1 @@
-mxnet vgg19 float32 4 151.239820 2090
+mxnet vgg19 float32 4 150.847864 2090

@@ -1,0 +1,1 @@
+tensorflow resnet152 float32 2 106.343544 2322

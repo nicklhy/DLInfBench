@@ -6,9 +6,10 @@
 * Nvidia Driver: 390.46
 * CUDA: 9.1.85
 * CUDNN: 7.1.3
-* Caffe GitHub hash: [cd88ec9](https://github.com/BVLC/caffe/commit/864520713a4c5ffae7382ced5d34e4cadc608473)
+* Caffe GitHub commit: [cd88ec9](https://github.com/BVLC/caffe/commit/864520713a4c5ffae7382ced5d34e4cadc608473)
 * MXNet Version: 1.1.0
 * PyTorch version: 0.4.0
+* Tensorflow version: 1.8.0
 
 ## AlexNet
 ![Speed Benchmark](results/tesla_v100/alexnet_speed.png)

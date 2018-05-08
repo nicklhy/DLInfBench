@@ -1,0 +1,1 @@
+tensorflow inception-bn float32 4 434.775300 1426
