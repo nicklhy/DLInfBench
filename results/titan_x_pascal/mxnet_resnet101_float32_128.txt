@@ -1,0 +1,1 @@
+mxnet resnet101 float32 128 433.123798 2109

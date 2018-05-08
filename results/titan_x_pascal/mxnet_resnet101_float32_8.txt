@@ -1,0 +1,1 @@
+mxnet resnet101 float32 8 355.480822 705

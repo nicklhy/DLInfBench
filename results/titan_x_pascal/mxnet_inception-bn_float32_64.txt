@@ -1,0 +1,1 @@
+mxnet inception-bn float32 64 1163.612152 983

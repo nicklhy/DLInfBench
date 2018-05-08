@@ -1,1 +1,0 @@
-mxnet inception-bn 16 786.080855 527
