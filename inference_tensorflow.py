@@ -52,7 +52,10 @@ if __name__ == '__main__':
 
     #  set up the network model for inference task
     #  ...
-    inputs = tf.placeholder(dtype=tf.float32, shape=[args.batch_size, im_size, im_size, 3])
+    dtype = tf.float32
+    if args.dtype == 'float16':
+        dtype = tf.float16
+    inputs = tf.placeholder(dtype=dtype, shape=[args.batch_size, im_size, im_size, 3])
     logits, end_points = network_fn(inputs)
     config = tf.ConfigProto(allow_soft_placement=True,
                             log_device_placement=False,
