@@ -1,0 +1,1 @@
+caffe inception-v3 float32 64 277.358184 11994

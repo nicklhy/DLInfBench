@@ -1,0 +1,1 @@
+pytorch resnet101 float32 4 201.886896 2348

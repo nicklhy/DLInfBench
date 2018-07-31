@@ -1,0 +1,1 @@
+mxnet resnet152 float16 1 79.163176 992

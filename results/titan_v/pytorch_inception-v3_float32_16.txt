@@ -1,0 +1,1 @@
+pytorch inception-v3 float32 16 358.137094 5406

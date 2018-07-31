@@ -1,0 +1,1 @@
+pytorch vgg19 float32 32 271.696492 9452
