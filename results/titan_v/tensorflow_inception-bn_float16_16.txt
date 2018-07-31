@@ -1,0 +1,1 @@
+tensorflow inception-bn float16 16 755.804788 1552
