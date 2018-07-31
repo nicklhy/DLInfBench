@@ -1,0 +1,1 @@
+tensorflow resnet50 float32 64 577.332876 4880

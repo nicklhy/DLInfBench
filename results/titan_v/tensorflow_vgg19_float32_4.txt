@@ -1,0 +1,1 @@
+tensorflow vgg19 float32 4 181.885603 6946

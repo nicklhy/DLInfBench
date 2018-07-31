@@ -1,0 +1,1 @@
+caffe2 alexnet float32 16 2577.345445 1054

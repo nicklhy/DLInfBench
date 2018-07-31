@@ -9,6 +9,7 @@
 * Caffe GitHub commit: [d3be594](https://github.com/BVLC/caffe/commit/2a1c552b66f026c7508d390b526f2495ed3be594)
 * MXNet Version: 1.3.0
 * PyTorch version: 0.4.1
+* TensorFlow: 1.9.0
 
 ## AlexNet
 ![Speed Benchmark](results/titan_v/alexnet_speed.png)

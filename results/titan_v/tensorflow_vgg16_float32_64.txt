@@ -1,0 +1,1 @@
+tensorflow vgg16 float32 64 390.863182 9104

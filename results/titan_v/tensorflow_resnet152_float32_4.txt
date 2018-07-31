@@ -1,0 +1,1 @@
+tensorflow resnet152 float32 4 151.508568 4880

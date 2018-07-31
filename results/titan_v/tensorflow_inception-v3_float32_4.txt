@@ -1,0 +1,1 @@
+tensorflow inception-v3 float32 4 198.025397 4368
