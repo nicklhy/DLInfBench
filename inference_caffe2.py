@@ -40,11 +40,11 @@ def create_alexnet(model,
     #  shape of pool5 is (batch_size, 256, 6, 6)
     model.FC('pool5', 'fc6', 256*6*6, 4096)
     model.Relu('fc6', 'fc6')
-    model.Dropout('fc6', 'fc6', dropout_ratio=0.5)
+    model.Dropout('fc6', 'fc6', dropout_ratio=0.5, is_test=True)
 
     model.FC('fc6', 'fc7', 4096, 4096)
     model.Relu('fc7', 'fc7')
-    model.Dropout('fc7', 'fc7', dropout_ratio=0.5)
+    model.Dropout('fc7', 'fc7', dropout_ratio=0.5, is_test=True)
 
     last_out = model.FC('fc7', 'fc8', 4096, num_labels)
 
