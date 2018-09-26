@@ -19,7 +19,7 @@ if __name__ == '__main__':
     parser.add_argument('--params', type=str, help='model parameters')
     parser.add_argument('--batch-size', type=int, default=1, help='batch size')
     parser.add_argument('--im-size', type=int, help='image size')
-    parser.add_argument('--n-sample', type=int, default=1000, help='number of samples')
+    parser.add_argument('--n-sample', type=int, default=1024, help='number of samples')
     parser.add_argument('--gpu', type=str, default='0', help='gpu device')
     parser.add_argument('--n-epoch', type=int, default=10, help='number of epochs')
     parser.add_argument('--warm-up-num', type=int, default=10, help='number of iterations for warming up')
