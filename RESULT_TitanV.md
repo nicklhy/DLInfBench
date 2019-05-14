@@ -1,4 +1,4 @@
-# Benchmark Results of Tesla V100
+# Benchmark Results of TitanV
 
 * GPU: Titan V
 * CPU: Intel(R) Xeon(R) CPU E5-2690 v4 @ 2.60GHz

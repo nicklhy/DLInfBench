@@ -1,0 +1,1 @@
+pytorch vgg16 float32 8 341.975602 2797

@@ -1,0 +1,1 @@
+mxnet resnet101 float32 16 468.190948 1111
