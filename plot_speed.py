@@ -82,7 +82,15 @@ if __name__ == '__main__':
         plt.xlabel('Batch Size')
         xticks = []
         for name in results:
-            plt.plot(results[name]['batch_size'], results[name][target.lower()], label=name, marker='x')
+            plt.plot(
+                results[name]['batch_size'],
+                results[name][target.lower()],
+                label=name,
+                marker='x'
+            )
+            for x, y in zip(results[name]['batch_size'],
+                            results[name][target.lower()]):
+                plt.text(x, y, '%.2f' % y, fontsize=6)
             if len(results[name]['batch_size']) > len(xticks):
                 xticks = results[name]['batch_size']
         plt.legend(loc=4)
